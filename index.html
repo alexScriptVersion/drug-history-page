@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Evolution of Pharmaceuticals</h1>
+            <p class="subtitle">A timeline of breakthrough treatments</p>
+            
+            <div class="dropdown-container">
+                <label for="drugClass">Select drug class:</label>
+                <select name="drugClass" id="drugClass">
+                    <option value="antidepressants" selected>Antidepressant drugs</option>
+                    <option value="antibiotics">Antibiotic drugs</option>
+                    <option value="opioids">Opioid drugs</option>
+                    <option value="antipsychotics">Antipsychotic drugs</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="journey-intro">
+            <h2>The Journey</h2>
+            <p>The history of antidepressants began serendipitously in the 1950s when researchers noticed mood improvements in tuberculosis patients. From these accidental discoveries emerged entire classes of medications that would transform mental health treatment, evolving from broad-acting compounds to precisely targeted therapies.</p>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+
+        <div class="legend">
+            <div class="legend-header">
+                <span class="legend-icon">⚕️</span>
+                <h3>Mechanism Classes</h3>
+            </div>
+            <p class="legend-description">Each antidepressant class works through distinct neurochemical pathways to alleviate depressive symptoms.</p>
+            <div class="legend-items">
+                <div class="legend-item maoi" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #ff6b6b, #ee5a6f);"></div>
+                            <div>
+                                <div class="legend-name">MAOI</div>
+                                <div class="legend-full">Monoamine Oxidase Inhibitor</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Inhibits monoamine oxidase enzymes, preventing the breakdown of neurotransmitters like serotonin, norepinephrine, and dopamine, thereby increasing their availability in the brain.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+                <div class="legend-item tca" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #feca57, #ff9f43);"></div>
+                            <div>
+                                <div class="legend-name">TCA</div>
+                                <div class="legend-full">Tricyclic Antidepressant</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Blocks reuptake of both serotonin and norepinephrine at neuronal synapses, increasing their concentration. Named for their three-ring chemical structure.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+                <div class="legend-item ndri" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #c44569, #a5325f);"></div>
+                            <div>
+                                <div class="legend-name">NDRI</div>
+                                <div class="legend-full">Norepinephrine-Dopamine Reuptake Inhibitor</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Selectively inhibits reuptake of norepinephrine and dopamine while leaving serotonin relatively unaffected, offering a unique profile with reduced sexual side effects.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+                <div class="legend-item ssri" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #48dbfb, #0abde3);"></div>
+                            <div>
+                                <div class="legend-name">SSRI</div>
+                                <div class="legend-full">Selective Serotonin Reuptake Inhibitor</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Specifically targets serotonin reuptake, increasing serotonin levels in synaptic clefts. Their selectivity results in fewer side effects compared to older antidepressants.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+                <div class="legend-item snri" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #1dd1a1, #10ac84);"></div>
+                            <div>
+                                <div class="legend-name">SNRI</div>
+                                <div class="legend-full">Serotonin-Norepinephrine Reuptake Inhibitor</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Blocks reuptake of both serotonin and norepinephrine, similar to TCAs but with improved side effect profile and better tolerability.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+                <div class="legend-item teca" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #ff9ff3, #ff6b9d);"></div>
+                            <div>
+                                <div class="legend-name">TeCA</div>
+                                <div class="legend-full">Tetracyclic Antidepressant</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Works through multiple mechanisms including alpha-2 adrenergic antagonism and histamine receptor blockade, enhancing norepinephrine and serotonin neurotransmission.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+                <div class="legend-item nmda" onclick="toggleLegendItem(this)">
+                    <div class="legend-item-content">
+                        <div class="legend-item-header">
+                            <div class="legend-dot" style="background: linear-gradient(135deg, #5f27cd, #341f97);"></div>
+                            <div>
+                                <div class="legend-name">NMDA Antagonist</div>
+                                <div class="legend-full">NMDA Receptor Antagonist</div>
+                            </div>
+                        </div>
+                        <div class="legend-mechanism">
+                            Blocks NMDA receptors in the brain, increasing glutamate activity and promoting rapid neuroplasticity. Represents a fundamentally different mechanism from monoamine-based treatments.
+                        </div>
+                    </div>
+                    <span class="legend-expand-icon">▼</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to data file first, then script file -->
+    <script src="drugs.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
