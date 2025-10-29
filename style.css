@@ -182,6 +182,12 @@ h1 {
 .timeline-item.oxazolidinone::before { box-shadow: 0 0 0 4px #5f27cd; }
 .timeline-item.lipopeptide::before { box-shadow: 0 0 0 4px #16a085; }
 
+/* Antipsychotic colors */
+.timeline-item.fga::before { box-shadow: 0 0 0 4px #ff6b6b; }
+.timeline-item.sga::before { box-shadow: 0 0 0 4px #54a0ff; }
+.timeline-item.tga::before { box-shadow: 0 0 0 4px #1dd1a1; }
+.timeline-item.mra::before { box-shadow: 0 0 0 4px #5f27cd; }
+
 /* Antidepressant hover colors */
 .timeline-item.maoi:hover { border-color: #ff6b6b; }
 .timeline-item.tca:hover { border-color: #feca57; }
@@ -202,6 +208,12 @@ h1 {
 .timeline-item.fluoroquinolone:hover { border-color: #f368e0; }
 .timeline-item.oxazolidinone:hover { border-color: #5f27cd; }
 .timeline-item.lipopeptide:hover { border-color: #16a085; }
+
+/* Antipsychotic hover colors */
+.timeline-item.fga:hover { border-color: #ff6b6b; }
+.timeline-item.sga:hover { border-color: #54a0ff; }
+.timeline-item.tga:hover { border-color: #1dd1a1; }
+.timeline-item.mra:hover { border-color: #5f27cd; }
 
 /* ============================================
    TIMELINE ITEM CONTENT
@@ -257,6 +269,13 @@ h1 {
 .timeline-item.oxazolidinone .icon-wrapper { background: linear-gradient(135deg, #5f27cd, #341f97); }
 .timeline-item.lipopeptide .icon-wrapper { background: linear-gradient(135deg, #16a085, #1abc9c); }
 
+/* Antipsychotic icon wrappers */
+.timeline-item.fga .icon-wrapper { background: linear-gradient(135deg, #ff6b6b, #ee5253); }
+.timeline-item.sga .icon-wrapper { background: linear-gradient(135deg, #54a0ff, #2e86de); }
+.timeline-item.tga .icon-wrapper { background: linear-gradient(135deg, #1dd1a1, #10ac84); }
+.timeline-item.mra .icon-wrapper { background: linear-gradient(135deg, #5f27cd, #341f97); }
+
+
 .drug-type {
     display: inline-flex;
     align-items: center;
@@ -289,6 +308,12 @@ h1 {
 .timeline-item.oxazolidinone .drug-type { background: #ede7f6; color: #311b92; }
 .timeline-item.lipopeptide .drug-type { background: #e0f2f1; color: #00695c; }
 
+/* Antipsychotic drug type badges */
+.timeline-item.fga .drug-type { background: #ffe5e5; color: #c0392b; }
+.timeline-item.sga .drug-type { background: #e3f2fd; color: #1565c0; }
+.timeline-item.tga .drug-type { background: #e0f2f1; color: #00796b; }
+.timeline-item.mra .drug-type { background: #ede7f6; color: #4527a0; }
+
 .year {
     display: inline-block;
     font-size: 13px;
@@ -319,6 +344,12 @@ h1 {
 .timeline-item.fluoroquinolone .year { background: linear-gradient(135deg, #f368e0, #ee5a6f); }
 .timeline-item.oxazolidinone .year { background: linear-gradient(135deg, #5f27cd, #341f97); }
 .timeline-item.lipopeptide .year { background: linear-gradient(135deg, #16a085, #1abc9c); }
+
+/* Antipsychotic year badges */
+.timeline-item.fga .year { background: linear-gradient(135deg, #ff6b6b, #ee5253); }
+.timeline-item.sga .year { background: linear-gradient(135deg, #54a0ff, #2e86de); }
+.timeline-item.tga .year { background: linear-gradient(135deg, #1dd1a1, #10ac84); }
+.timeline-item.mra .year { background: linear-gradient(135deg, #5f27cd, #341f97); }
 
 .description {
     font-size: 14px;
@@ -401,6 +432,12 @@ h1 {
 .timeline-item.oxazolidinone .detail-label { color: #311b92; }
 .timeline-item.lipopeptide .detail-label { color: #00695c; }
 
+/* Antipsychotic detail labels */
+.timeline-item.fga .detail-label { color: #c0392b; }
+.timeline-item.sga .detail-label { color: #1565c0; }
+.timeline-item.tga .detail-label { color: #00796b; }
+.timeline-item.mra .detail-label { color: #4527a0; }
+
 .detail-content {
     font-size: 13px;
     color: #2d3748;
@@ -470,6 +507,7 @@ h1 {
     transform: translateX(2px);
 }
 
+/* Antidepressant legend mechanism categories */
 .legend-item.maoi { border-color: #ff6b6b; }
 .legend-item.tca { border-color: #feca57; }
 .legend-item.ndri { border-color: #c44569; }
@@ -484,6 +522,12 @@ h1 {
 .legend-item.dna-rna { border-color: #9b59b6; }
 .legend-item.membrane { border-color: #1abc9c; }
 .legend-item.metabolic { border-color: #f39c12; }
+
+/* Antipsychotic legend mechanism categories */
+.legend-item.fga { border-color: #ff6b6b; }
+.legend-item.sga { border-color: #54a0ff; }
+.legend-item.tga { border-color: #1dd1a1; }
+.legend-item.mra { border-color: #5f27cd; }
 
 .legend-item-content {
     flex: 1;

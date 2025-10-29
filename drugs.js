@@ -223,7 +223,139 @@ const drugClasses = {
       impact: "First novel mechanism for depression in decades, rapid-acting effects",
       controversy: "Concerns about abuse potential, dissociative effects, and high cost"
     }
-  ]
+  ],
+  antipsychotics: [
+  {
+    id: 1,
+    name: "Chlorpromazine (Thorazine)",
+    year: 1954,
+    type: "Typical Antipsychotic/First-Generation Antipsychotic",
+    typeAbbreviation: "FGA",
+    classKey: "fga",
+    icon: "🧪",
+    description: "First antipsychotic drug, originally developed as an antihistamine",
+    discoveredBy: "Jean Delay and Pierre Deniker",
+    impact: "Revolutionized psychiatric care and enabled deinstitutionalization",
+    controversy: "Caused significant extrapyramidal side effects"
+  },
+  {
+    id: 2,
+    name: "Haloperidol (Haldol)",
+    year: 1958,
+    type: "Typical Antipsychotic/First-Generation Antipsychotic",
+    typeAbbreviation: "FGA",
+    classKey: "fga",
+    icon: "🧊",
+    description: "High-potency antipsychotic used for acute psychosis and agitation",
+    discoveredBy: "Paul Janssen",
+    impact: "Widely used in emergency psychiatry and long-term care",
+    controversy: "High risk of movement disorders and neuroleptic malignant syndrome"
+  },
+  {
+    id: 3,
+    name: "Fluphenazine (Prolixin)",
+    year: 1959,
+    type: "Typical Antipsychotic/First-Generation Antipsychotic",
+    typeAbbreviation: "FGA",
+    classKey: "fga",
+    icon: "💉",
+    description: "Available in long-acting injectable form for maintenance therapy",
+    discoveredBy: "Researchers at Smith Kline & French",
+    impact: "Improved adherence in chronic schizophrenia",
+    controversy: "Similar side effect profile to other FGAs"
+  },
+  {
+    id: 4,
+    name: "Clozapine (Clozaril)",
+    year: 1990,
+    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
+    typeAbbreviation: "SGA",
+    classKey: "sga",
+    icon: "🔥",
+    description: "First atypical antipsychotic, effective for treatment-resistant cases",
+    discoveredBy: "Wander Pharmaceuticals",
+    impact: "Superior efficacy for negative symptoms and suicidality",
+    controversy: "Risk of agranulocytosis requires regular blood monitoring"
+  },
+  {
+    id: 5,
+    name: "Risperidone (Risperdal)",
+    year: 1994,
+    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
+    typeAbbreviation: "SGA",
+    classKey: "sga",
+    icon: "🌿",
+    description: "Balanced dopamine and serotonin receptor antagonist",
+    discoveredBy: "Janssen Pharmaceuticals",
+    impact: "Improved tolerability and broader symptom coverage",
+    controversy: "Can cause prolactin elevation and weight gain"
+  },
+  {
+    id: 6,
+    name: "Olanzapine (Zyprexa)",
+    year: 1996,
+    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
+    typeAbbreviation: "SGA",
+    classKey: "sga",
+    icon: "🍽️",
+    description: "Highly effective but associated with metabolic side effects",
+    discoveredBy: "Eli Lilly",
+    impact: "Widely prescribed for schizophrenia and bipolar disorder",
+    controversy: "Linked to diabetes and significant weight gain"
+  },
+  {
+    id: 7,
+    name: "Quetiapine (Seroquel)",
+    year: 1997,
+    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
+    typeAbbreviation: "SGA",
+    classKey: "sga",
+    icon: "😴",
+    description: "Sedating antipsychotic with broad psychiatric indications",
+    discoveredBy: "AstraZeneca",
+    impact: "Used in mood disorders and psychosis",
+    controversy: "Off-label use and sedation concerns"
+  },
+  {
+    id: 8,
+    name: "Aripiprazole (Abilify)",
+    year: 2002,
+    type: "Partial Dopamine Agonist/Third-Generation Antipsychotic",
+    typeAbbreviation: "TGA",
+    classKey: "tga",
+    icon: "⚖️",
+    description: "First dopamine partial agonist antipsychotic",
+    discoveredBy: "Otsuka Pharmaceutical",
+    impact: "Lower risk of weight gain and EPS",
+    controversy: "May cause akathisia and impulse control issues"
+  },
+  {
+    id: 9,
+    name: "Cariprazine (Vraylar)",
+    year: 2015,
+    type: "D3-D2 Partial Agonist/Third-Generation Antipsychotic",
+    typeAbbreviation: "TGA",
+    classKey: "tga",
+    icon: "🧠",
+    description: "Targets dopamine D3 receptors, promising for cognitive symptoms",
+    discoveredBy: "Gedeon Richter",
+    impact: "Effective for bipolar depression and schizophrenia",
+    controversy: "Long half-life complicates dosing"
+  },
+  {
+    id: 10,
+    name: "Xanomeline-Trospium (KarXT)",
+    year: 2024,
+    type: "Muscarinic Receptor Agonist",
+    typeAbbreviation: "MRA",
+    classKey: "mra",
+    icon: "🔬",
+    description: "Novel non-dopaminergic antipsychotic targeting muscarinic receptors",
+    discoveredBy: "Karuna Therapeutics",
+    impact: "Breakthrough for psychosis with fewer motor side effects",
+    controversy: "Still under evaluation for long-term safety"
+  }
+]
 };
 
 // Optional: Helper function to get all drug classes (useful when you add more classes later)
@@ -233,13 +365,17 @@ function getAllClasses() {
 
 // Journey text for each drug class
 const journeyTexts = {
+  antibiotics: {
+    title: "The Journey",
+    text: "The antibiotic era began with accidental discoveries and systematic research that transformed medicine. From Fleming's contaminated petri dish to targeted molecular designs, antibiotics have saved countless lives while sparking an evolutionary arms race with bacteria. This timeline traces humanity's ongoing battle against bacterial infections."
+  },
   antidepressants: {
     title: "The Journey",
     text: "The history of antidepressants began serendipitously in the 1950s when researchers noticed mood improvements in tuberculosis patients. From these accidental discoveries emerged entire classes of medications that would transform mental health treatment, evolving from broad-acting compounds to precisely targeted therapies."
   },
-  antibiotics: {
+  antipsychotics: {
     title: "The Journey",
-    text: "The antibiotic era began with accidental discoveries and systematic research that transformed medicine. From Fleming's contaminated petri dish to targeted molecular designs, antibiotics have saved countless lives while sparking an evolutionary arms race with bacteria. This timeline traces humanity's ongoing battle against bacterial infections."
+    text: "The history of antipsychotics began in the 1950s with the discovery of chlorpromazine, which transformed the treatment of schizophrenia and other psychotic disorders. Over time, the field evolved from dopamine-blocking typical antipsychotics to atypical agents with broader receptor profiles, and now to novel compounds targeting entirely new pathways like muscarinic receptors. This journey reflects a growing understanding of the complexity of psychosis and the need for more personalized, tolerable treatments."
   }
 };
 
@@ -340,6 +476,41 @@ const legendData = {
         color: "linear-gradient(135deg, #f39c12, #e67e22)",
         classKey: "metabolic",
         mechanism: "Block essential metabolic pathways bacteria need to survive. Sulfonamides mimic a molecule bacteria need to make folic acid, a vitamin critical for DNA synthesis."
+      }
+    ]
+  },
+  antipsychotics: {
+    title: "Mechanism Classes",
+    icon: "🧠",
+    description: "Antipsychotics work through various mechanisms to reduce psychotic symptoms, targeting dopamine, serotonin, and other neurotransmitter systems.",
+    items: [
+      {
+        name: "FGA",
+        fullName: "First-Generation Antipsychotic",
+        color: "linear-gradient(135deg, #ff6b6b, #ee5253)",
+        classKey: "fga",
+        mechanism: "Primarily block dopamine D2 receptors in the mesolimbic pathway, reducing positive symptoms but often causing extrapyramidal side effects."
+      },
+      {
+        name: "SGA",
+        fullName: "Second-Generation Antipsychotic",
+        color: "linear-gradient(135deg, #54a0ff, #2e86de)",
+        classKey: "sga",
+        mechanism: "Block both dopamine D2 and serotonin 5-HT2A receptors, improving tolerability and addressing negative symptoms more effectively."
+      },
+      {
+        name: "TGA",
+        fullName: "Third-Generation Antipsychotic",
+        color: "linear-gradient(135deg, #1dd1a1, #10ac84)",
+        classKey: "tga",
+        mechanism: "Act as partial agonists at dopamine D2 and D3 receptors, balancing dopamine activity and reducing side effects like sedation and weight gain."
+      },
+      {
+        name: "MRA",
+        fullName: "Muscarinic Receptor Agonist",
+        color: "linear-gradient(135deg, #5f27cd, #341f97)",
+        classKey: "mra",
+        mechanism: "Target muscarinic acetylcholine receptors to modulate brain circuits involved in psychosis, offering a non-dopaminergic approach with fewer motor side effects."
       }
     ]
   }
