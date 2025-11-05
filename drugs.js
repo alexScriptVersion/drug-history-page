@@ -1,4 +1,102 @@
+// ============================================
+// DRUG DATA
+// ============================================
+
 const drugClasses = {
+  antidepressants: [
+    {
+      id: 1,
+      name: "Iproniazid (Marsilid)",
+      year: 1958,
+      type: "Monoamine Oxidase Inhibitor",
+      typeAbbreviation: "MAOI",
+      classKey: "maoi",
+      icon: "🔬",
+      description: "First antidepressant discovered, initially developed as tuberculosis treatment",
+      discoveredBy: "Researchers at Hoffmann-La Roche",
+      impact: "Pioneered the biological treatment of depression",
+      controversy: "Withdrawn in many countries due to hepatotoxicity concerns"
+    },
+    {
+      id: 2,
+      name: "Imipramine (Tofranil)",
+      year: 1959,
+      type: "Tricyclic Antidepressant",
+      typeAbbreviation: "TCA",
+      classKey: "tca",
+      icon: "🔄",
+      description: "First tricyclic antidepressant, discovered while researching antipsychotics",
+      discoveredBy: "Roland Kuhn",
+      impact: "Established the monoamine hypothesis of depression",
+      controversy: "Significant side effects and dangerous in overdose"
+    },
+    {
+      id: 3,
+      name: "Bupropion (Wellbutrin)",
+      year: 1985,
+      type: "Norepinephrine-Dopamine Reuptake Inhibitor",
+      typeAbbreviation: "NDRI",
+      classKey: "ndri",
+      icon: "⚙️",
+      description: "Atypical antidepressant affecting dopamine and norepinephrine, not serotonin",
+      discoveredBy: "Nariman Mehta at Burroughs Wellcome",
+      impact: "Widely used for depression and smoking cessation with fewer sexual side effects",
+      controversy: "Initially withdrawn due to seizure risk, later reintroduced with dosing adjustments"
+    },
+    {
+      id: 4,
+      name: "Fluoxetine (Prozac)",
+      year: 1987,
+      type: "Selective Serotonin Reuptake Inhibitor",
+      typeAbbreviation: "SSRI",
+      classKey: "ssri",
+      icon: "⚡",
+      description: "First SSRI approved by FDA",
+      discoveredBy: "Bryan Molloy and Klaus Schmiegel at Eli Lilly",
+      impact: "Revolutionized depression treatment",
+      controversy: "Sparked debates about over-prescription"
+    },
+    {
+      id: 5,
+      name: "Venlafaxine (Effexor)",
+      year: 1993,
+      type: "Serotonin-Norepinephrine Reuptake Inhibitor",
+      typeAbbreviation: "SNRI",
+      classKey: "snri",
+      icon: "🔗",
+      description: "First SNRI approved, targeting both serotonin and norepinephrine reuptake",
+      discoveredBy: "Researchers at Wyeth Pharmaceuticals",
+      impact: "Provided alternative for patients who didn't respond to SSRIs",
+      controversy: "Notable withdrawal symptoms when discontinuing treatment"
+    },
+    {
+      id: 6,
+      name: "Mirtazapine (Remeron)",
+      year: 1996,
+      type: "Tetracyclic Antidepressant",
+      typeAbbreviation: "TeCA",
+      classKey: "teca",
+      icon: "🔮",
+      description: "Tetracyclic antidepressant with unique receptor profile",
+      discoveredBy: "Researchers at Organon",
+      impact: "Helpful for patients with insomnia and appetite loss, minimal sexual side effects",
+      controversy: "Significant weight gain and sedation as common side effects"
+    },
+    {
+      id: 7,
+      name: "Esketamine (Spravato)",
+      year: 2019,
+      type: "NMDA Receptor Antagonist",
+      typeAbbreviation: "NMDA",
+      classKey: "nmda",
+      icon: "💫",
+      description: "Nasal spray for treatment-resistant depression, derived from ketamine",
+      discoveredBy: "Janssen Pharmaceuticals",
+      impact: "First novel mechanism for depression in decades, rapid-acting effects",
+      controversy: "Concerns about abuse potential, dissociative effects, and high cost"
+    }
+  ],
+
   antibiotics: [
     {
       id: 1,
@@ -131,255 +229,683 @@ const drugClasses = {
       controversy: "High cost and IV-only administration limits use to hospital settings"
     }
   ],
-  antidepressants: [
+
+  antipsychotics: [
     {
       id: 1,
-      name: "Iproniazid (Marsilid)",
-      year: 1958,
-      type: "Monoamine Oxidase Inhibitor",
-      typeAbbreviation: "MAOI",
-      classKey: "maoi",
-      icon: "🔬",
-      description: "First antidepressant discovered, initially developed as tuberculosis treatment",
-      discoveredBy: "Researchers at Hoffmann-La Roche",
-      impact: "Pioneered the biological treatment of depression",
-      controversy: "Withdrawn in many countries due to hepatotoxicity concerns"
+      name: "Chlorpromazine (Thorazine)",
+      year: 1952,
+      type: "Typical Antipsychotic",
+      typeAbbreviation: "FGA",
+      classKey: "typical-low",
+      icon: "🧪",
+      description: "First antipsychotic medication, discovered accidentally while testing surgical anesthetics",
+      discoveredBy: "Henri Laborit, Jean Delay, and Pierre Deniker",
+      impact: "Revolutionized psychiatric treatment; enabled deinstitutionalization and community-based care for millions",
+      controversy: "Severe movement side effects (extrapyramidal symptoms); led to involuntary use and concerns about overmedication"
     },
     {
       id: 2,
-      name: "Imipramine (Tofranil)",
-      year: 1959,
-      type: "Tricyclic Antidepressant",
-      typeAbbreviation: "TCA",
-      classKey: "tca",
-      icon: "🔄",
-      description: "First tricyclic antidepressant, discovered while researching antipsychotics",
-      discoveredBy: "Roland Kuhn",
-      impact: "Established the monoamine hypothesis of depression",
-      controversy: "Significant side effects and dangerous in overdose"
+      name: "Haloperidol (Haldol)",
+      year: 1958,
+      type: "Typical Antipsychotic",
+      typeAbbreviation: "FGA",
+      classKey: "typical-high",
+      icon: "💊",
+      description: "High-potency typical antipsychotic that became the most widely used for acute psychosis",
+      discoveredBy: "Paul Janssen at Janssen Pharmaceuticals",
+      impact: "Gold standard for decades; highly effective for positive symptoms; available in long-acting injectable form",
+      controversy: "High risk of severe movement disorders including potentially irreversible tardive dyskinesia"
     },
     {
       id: 3,
-      name: "Bupropion (Wellbutrin)",
-      year: 1985,
-      type: "Norepinephrine-Dopamine Reuptake Inhibitor",
-      typeAbbreviation: "NDRI",
-      classKey: "ndri",
-      icon: "⚙️",
-      description: "Atypical antidepressant affecting dopamine and norepinephrine, not serotonin",
-      discoveredBy: "Nariman Mehta at Burroughs Wellcome",
-      impact: "Widely used for depression and smoking cessation with fewer sexual side effects",
-      controversy: "Initially withdrawn due to seizure risk, later reintroduced with dosing adjustments"
+      name: "Clozapine (Clozaril)",
+      year: 1989,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "atypical-clozapine",
+      icon: "⚡",
+      description: "Superior efficacy antipsychotic discovered in 1972, approved for treatment-resistant schizophrenia in 1989",
+      discoveredBy: "Wander AG (now part of Novartis)",
+      impact: "Most effective antipsychotic for treatment-resistant cases; fewer movement side effects than typicals",
+      controversy: "Rare but potentially fatal agranulocytosis requires lifelong blood monitoring; initially withdrawn, later reintroduced"
     },
     {
       id: 4,
-      name: "Fluoxetine (Prozac)",
-      year: 1987,
-      type: "Selective Serotonin Reuptake Inhibitor",
-      typeAbbreviation: "SSRI",
-      classKey: "ssri",
-      icon: "⚡",
-      description: "First SSRI approved by FDA",
-      discoveredBy: "Bryan Molloy and Klaus Schmiegel at Eli Lilly",
-      impact: "Revolutionized depression treatment",
-      controversy: "Sparked debates about over-prescription"
+      name: "Risperidone (Risperdal)",
+      year: 1993,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "atypical-standard",
+      icon: "🔬",
+      description: "First successful second-generation antipsychotic widely prescribed as safer alternative to typicals",
+      discoveredBy: "Janssen Pharmaceuticals",
+      impact: "Established atypicals as first-line treatment; effective for both positive and negative symptoms",
+      controversy: "Significant metabolic side effects including weight gain, diabetes; expensive compared to generics"
     },
     {
       id: 5,
-      name: "Venlafaxine (Effexor)",
-      year: 1993,
-      type: "Serotonin-Norepinephrine Reuptake Inhibitor",
-      typeAbbreviation: "SNRI",
-      classKey: "snri",
-      icon: "🔗",
-      description: "First SNRI approved, targeting both serotonin and norepinephrine reuptake",
-      discoveredBy: "Researchers at Wyeth Pharmaceuticals",
-      impact: "Provided alternative for patients who didn't respond to SSRIs",
-      controversy: "Notable withdrawal symptoms when discontinuing treatment"
+      name: "Olanzapine (Zyprexa)",
+      year: 1996,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "atypical-standard",
+      icon: "💫",
+      description: "Highly effective atypical antipsychotic that became a blockbuster medication",
+      discoveredBy: "Eli Lilly and Company",
+      impact: "One of most prescribed antipsychotics globally; excellent efficacy for acute psychosis and maintenance",
+      controversy: "Substantial weight gain and metabolic syndrome risk; litigation over downplayed side effects"
     },
     {
       id: 6,
-      name: "Mirtazapine (Remeron)",
-      year: 1996,
-      type: "Tetracyclic Antidepressant",
-      typeAbbreviation: "TeCA",
-      classKey: "teca",
-      icon: "🔮",
-      description: "Tetracyclic antidepressant with unique receptor profile",
-      discoveredBy: "Researchers at Organon",
-      impact: "Helpful for patients with insomnia and appetite loss, minimal sexual side effects",
-      controversy: "Significant weight gain and sedation as common side effects"
+      name: "Quetiapine (Seroquel)",
+      year: 1997,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "atypical-standard",
+      icon: "🌙",
+      description: "Sedating atypical antipsychotic widely used for psychosis, bipolar disorder, and off-label for sleep",
+      discoveredBy: "AstraZeneca",
+      impact: "Versatile medication for multiple psychiatric conditions; lower movement disorder risk than older drugs",
+      controversy: "Widespread off-label prescribing for insomnia and anxiety; metabolic side effects; street value as sedative"
     },
     {
       id: 7,
-      name: "Esketamine (Spravato)",
-      year: 2019,
-      type: "NMDA Receptor Antagonist",
-      typeAbbreviation: "NMDA",
-      classKey: "nmda",
-      icon: "💫",
-      description: "Nasal spray for treatment-resistant depression, derived from ketamine",
-      discoveredBy: "Janssen Pharmaceuticals",
-      impact: "First novel mechanism for depression in decades, rapid-acting effects",
-      controversy: "Concerns about abuse potential, dissociative effects, and high cost"
+      name: "Aripiprazole (Abilify)",
+      year: 2002,
+      type: "Third-Generation Antipsychotic",
+      typeAbbreviation: "TGA",
+      classKey: "third-gen",
+      icon: "⚙️",
+      description: "Partial dopamine agonist that stabilizes dopamine rather than simply blocking it",
+      discoveredBy: "Otsuka Pharmaceutical and Bristol-Myers Squibb",
+      impact: "Novel mechanism with lower weight gain and metabolic effects; effective for schizophrenia and bipolar",
+      controversy: "Activation and restlessness (akathisia) common; expensive; heavily marketed leading to overprescription concerns"
+    },
+    {
+      id: 8,
+      name: "Cariprazine (Vraylar)",
+      year: 2015,
+      type: "Third-Generation Antipsychotic",
+      typeAbbreviation: "TGA",
+      classKey: "third-gen",
+      icon: "🔮",
+      description: "Modern partial agonist with preferential binding to D3 receptors, targeting negative symptoms",
+      discoveredBy: "Gedeon Richter and Allergan",
+      impact: "Potentially superior for negative symptoms and cognitive deficits; represents continued innovation in antipsychotic development",
+      controversy: "Very expensive; limited long-term data; unclear if truly superior to older third-generation drugs"
     }
   ],
-  antipsychotics: [
-  {
-    id: 1,
-    name: "Chlorpromazine (Thorazine)",
-    year: 1954,
-    type: "Typical Antipsychotic/First-Generation Antipsychotic",
-    typeAbbreviation: "FGA",
-    classKey: "fga",
-    icon: "🧪",
-    description: "First antipsychotic drug, originally developed as an antihistamine",
-    discoveredBy: "Jean Delay and Pierre Deniker",
-    impact: "Revolutionized psychiatric care and enabled deinstitutionalization",
-    controversy: "Caused significant extrapyramidal side effects"
-  },
-  {
-    id: 2,
-    name: "Haloperidol (Haldol)",
-    year: 1958,
-    type: "Typical Antipsychotic/First-Generation Antipsychotic",
-    typeAbbreviation: "FGA",
-    classKey: "fga",
-    icon: "🧊",
-    description: "High-potency antipsychotic used for acute psychosis and agitation",
-    discoveredBy: "Paul Janssen",
-    impact: "Widely used in emergency psychiatry and long-term care",
-    controversy: "High risk of movement disorders and neuroleptic malignant syndrome"
-  },
-  {
-    id: 3,
-    name: "Fluphenazine (Prolixin)",
-    year: 1959,
-    type: "Typical Antipsychotic/First-Generation Antipsychotic",
-    typeAbbreviation: "FGA",
-    classKey: "fga",
-    icon: "💉",
-    description: "Available in long-acting injectable form for maintenance therapy",
-    discoveredBy: "Researchers at Smith Kline & French",
-    impact: "Improved adherence in chronic schizophrenia",
-    controversy: "Similar side effect profile to other FGAs"
-  },
-  {
-    id: 4,
-    name: "Clozapine (Clozaril)",
-    year: 1990,
-    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
-    typeAbbreviation: "SGA",
-    classKey: "sga",
-    icon: "🔥",
-    description: "First atypical antipsychotic, effective for treatment-resistant cases",
-    discoveredBy: "Wander Pharmaceuticals",
-    impact: "Superior efficacy for negative symptoms and suicidality",
-    controversy: "Risk of agranulocytosis requires regular blood monitoring"
-  },
-  {
-    id: 5,
-    name: "Risperidone (Risperdal)",
-    year: 1994,
-    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
-    typeAbbreviation: "SGA",
-    classKey: "sga",
-    icon: "🌿",
-    description: "Balanced dopamine and serotonin receptor antagonist",
-    discoveredBy: "Janssen Pharmaceuticals",
-    impact: "Improved tolerability and broader symptom coverage",
-    controversy: "Can cause prolactin elevation and weight gain"
-  },
-  {
-    id: 6,
-    name: "Olanzapine (Zyprexa)",
-    year: 1996,
-    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
-    typeAbbreviation: "SGA",
-    classKey: "sga",
-    icon: "🍽️",
-    description: "Highly effective but associated with metabolic side effects",
-    discoveredBy: "Eli Lilly",
-    impact: "Widely prescribed for schizophrenia and bipolar disorder",
-    controversy: "Linked to diabetes and significant weight gain"
-  },
-  {
-    id: 7,
-    name: "Quetiapine (Seroquel)",
-    year: 1997,
-    type: "Atypical Antipsychotic/Second-Generation Antipsychotic",
-    typeAbbreviation: "SGA",
-    classKey: "sga",
-    icon: "😴",
-    description: "Sedating antipsychotic with broad psychiatric indications",
-    discoveredBy: "AstraZeneca",
-    impact: "Used in mood disorders and psychosis",
-    controversy: "Off-label use and sedation concerns"
-  },
-  {
-    id: 8,
-    name: "Aripiprazole (Abilify)",
-    year: 2002,
-    type: "Partial Dopamine Agonist/Third-Generation Antipsychotic",
-    typeAbbreviation: "TGA",
-    classKey: "tga",
-    icon: "⚖️",
-    description: "First dopamine partial agonist antipsychotic",
-    discoveredBy: "Otsuka Pharmaceutical",
-    impact: "Lower risk of weight gain and EPS",
-    controversy: "May cause akathisia and impulse control issues"
-  },
-  {
-    id: 9,
-    name: "Cariprazine (Vraylar)",
-    year: 2015,
-    type: "D3-D2 Partial Agonist/Third-Generation Antipsychotic",
-    typeAbbreviation: "TGA",
-    classKey: "tga",
-    icon: "🧠",
-    description: "Targets dopamine D3 receptors, promising for cognitive symptoms",
-    discoveredBy: "Gedeon Richter",
-    impact: "Effective for bipolar depression and schizophrenia",
-    controversy: "Long half-life complicates dosing"
-  },
-  {
-    id: 10,
-    name: "Xanomeline-Trospium (KarXT)",
-    year: 2024,
-    type: "Muscarinic Receptor Agonist",
-    typeAbbreviation: "MRA",
-    classKey: "mra",
-    icon: "🔬",
-    description: "Novel non-dopaminergic antipsychotic targeting muscarinic receptors",
-    discoveredBy: "Karuna Therapeutics",
-    impact: "Breakthrough for psychosis with fewer motor side effects",
-    controversy: "Still under evaluation for long-term safety"
-  }
-]
+
+  opioids: [
+    {
+      id: 1,
+      name: "Morphine",
+      year: 1804,
+      type: "Natural Opioid Alkaloid",
+      typeAbbreviation: "NAT",
+      classKey: "natural-opioid",
+      icon: "💉",
+      description: "First active compound isolated from opium poppy, revolutionized pain management and pharmacology",
+      discoveredBy: "Friedrich Sertürner",
+      impact: "Established modern pharmacology by proving active ingredients could be isolated from plants; remains gold standard for severe pain",
+      controversy: "Highly addictive; widespread use led to addiction epidemic and strict regulation by early 1900s"
+    },
+    {
+      id: 2,
+      name: "Codeine",
+      year: 1832,
+      type: "Natural Opioid Alkaloid",
+      typeAbbreviation: "NAT",
+      classKey: "natural-opioid",
+      icon: "🌿",
+      description: "Weaker opioid isolated from opium, widely used for mild pain and cough suppression",
+      discoveredBy: "Pierre Jean Robiquet",
+      impact: "Provided safer alternative to morphine for moderate pain; still commonly prescribed for cough",
+      controversy: "Over-the-counter availability in some countries led to misuse; codeine cough syrup abuse"
+    },
+    {
+      id: 3,
+      name: "Heroin (Diacetylmorphine)",
+      year: 1898,
+      type: "Semi-synthetic Opioid",
+      typeAbbreviation: "SEMI",
+      classKey: "semisynthetic-opioid",
+      icon: "⚠️",
+      description: "Synthesized in 1874, marketed by Bayer in 1898 as safe morphine substitute and cough suppressant",
+      discoveredBy: "C.R. Alder Wright (1874), marketed by Bayer",
+      impact: "Caused massive addiction epidemic; led to international drug control treaties and modern drug regulation",
+      controversy: "One of medicine's biggest mistakes; marketed as non-addictive despite being highly addictive; now illegal in most countries"
+    },
+    {
+      id: 4,
+      name: "Oxycodone",
+      year: 1916,
+      type: "Semi-synthetic Opioid",
+      typeAbbreviation: "SEMI",
+      classKey: "semisynthetic-opioid",
+      icon: "💊",
+      description: "Semi-synthetic opioid derived from thebaine, later formulated as OxyContin (1996)",
+      discoveredBy: "Martin Freund and Edmund Speyer at University of Frankfurt",
+      impact: "Effective pain management when used appropriately; became backbone of modern pain treatment",
+      controversy: "OxyContin formulation sparked modern opioid epidemic through aggressive marketing and overprescription"
+    },
+    {
+      id: 5,
+      name: "Meperidine (Demerol)",
+      year: 1939,
+      type: "Synthetic Opioid",
+      typeAbbreviation: "SYN",
+      classKey: "synthetic-opioid",
+      icon: "⚗️",
+      description: "First fully synthetic opioid, proved pain relief didn't require poppy-derived compounds",
+      discoveredBy: "Otto Eisleb and Otto Schaumann at IG Farben",
+      impact: "Demonstrated synthetic opioids were possible; widely used in hospitals for decades",
+      controversy: "Toxic metabolite accumulation causes seizures; largely replaced by safer alternatives"
+    },
+    {
+      id: 6,
+      name: "Methadone (Dolophine)",
+      year: 1946,
+      type: "Synthetic Opioid",
+      typeAbbreviation: "SYN",
+      classKey: "synthetic-opioid",
+      icon: "🔄",
+      description: "Long-acting synthetic opioid developed during WWII morphine shortage, later used for addiction treatment",
+      discoveredBy: "Max Bockmühl and Gustav Ehrhart at IG Farben",
+      impact: "Revolutionized opioid addiction treatment through maintenance therapy; reduces crime and overdose deaths",
+      controversy: "Methadone clinics stigmatized; debate over whether maintenance therapy is treatment or continued addiction"
+    },
+    {
+      id: 7,
+      name: "Fentanyl (Sublimaze)",
+      year: 1960,
+      type: "Synthetic Opioid",
+      typeAbbreviation: "SYN",
+      classKey: "synthetic-opioid",
+      icon: "⚡",
+      description: "Extremely potent synthetic opioid (50-100x morphine), revolutionary for anesthesia",
+      discoveredBy: "Paul Janssen at Janssen Pharmaceuticals",
+      impact: "Transformed surgical anesthesia; enabled safer operations with precise pain control",
+      controversy: "Illicit fentanyl now major cause of overdose deaths; tiny amounts are lethal; driving current overdose crisis"
+    },
+    {
+      id: 8,
+      name: "Tramadol (Ultram)",
+      year: 1977,
+      type: "Atypical Opioid",
+      typeAbbreviation: "ATYP",
+      classKey: "atypical-opioid",
+      icon: "💫",
+      description: "Weak μ-opioid agonist with additional serotonin/norepinephrine reuptake inhibition",
+      discoveredBy: "Grünenthal GmbH",
+      impact: "Marketed as safer opioid alternative for moderate pain; widely prescribed globally",
+      controversy: "Initially unscheduled in US due to perceived low abuse potential; later scheduled after addiction cases emerged"
+    },
+    {
+      id: 9,
+      name: "Buprenorphine (Subutex)",
+      year: 1978,
+      type: "Partial Opioid Agonist",
+      typeAbbreviation: "PARTIAL",
+      classKey: "partial-agonist",
+      icon: "🛡️",
+      description: "Partial μ-opioid agonist with ceiling effect, making it safer than full agonists",
+      discoveredBy: "Reckitt & Colman (now Reckitt Benckiser)",
+      impact: "Enabled office-based addiction treatment (Suboxone); safer alternative to methadone with lower abuse potential",
+      controversy: "Access barriers due to prescribing restrictions; debate over appropriate duration of treatment"
+    },
+    {
+      id: 10,
+      name: "Naloxone (Narcan)",
+      year: 1961,
+      type: "Opioid Antagonist",
+      typeAbbreviation: "ANTAG",
+      classKey: "antagonist",
+      icon: "🚑",
+      description: "Opioid receptor antagonist that rapidly reverses opioid overdose by displacing opioids from receptors",
+      discoveredBy: "Mozes J. Lewenstein and Jack Fishman at Sankyo",
+      impact: "Saves thousands of lives annually; widespread distribution to first responders and public; can be administered by non-medical personnel",
+      controversy: "Some argue widespread availability enables continued drug use; debate over requiring prescriptions with opioids"
+    }
+  ],
+  anxiolytics: [
+    {
+      id: 1,
+      name: "Phenobarbital (Luminal)",
+      year: 1912,
+      type: "Barbiturate",
+      typeAbbreviation: "BARB",
+      classKey: "barbiturate",
+      icon: "⚗️",
+      description: "First barbiturate used for anxiety and sedation, highly effective but dangerously addictive",
+      discoveredBy: "Emil Fischer and Joseph von Mering",
+      impact: "Established pharmacological treatment of anxiety; widely used for decades before benzodiazepines",
+      controversy: "Narrow therapeutic window; easy to overdose fatally; highly addictive; largely replaced by safer alternatives"
+    },
+    {
+      id: 2,
+      name: "Meprobamate (Miltown)",
+      year: 1955,
+      type: "Carbamate",
+      typeAbbreviation: "CARB",
+      classKey: "carbamate",
+      icon: "💊",
+      description: "First blockbuster tranquilizer, considered America's first lifestyle drug for everyday stress",
+      discoveredBy: "Frank Berger at Carter Products",
+      impact: "Destigmatized anxiety treatment; made taking pills for stress socially acceptable; paved way for benzodiazepines",
+      controversy: "Created culture of pharmaceutical stress relief; highly addictive despite marketing as safe; withdrawal can be fatal"
+    },
+    {
+      id: 3,
+      name: "Hydroxyzine (Atarax, Vistaril)",
+      year: 1956,
+      type: "Antihistamine",
+      typeAbbreviation: "H1",
+      classKey: "antihistamine",
+      icon: "🌿",
+      description: "Antihistamine approved for anxiety and allergies; gained renewed interest as non-addictive alternative to benzodiazepines",
+      discoveredBy: "Union Chimique Belge",
+      impact: "Provided non-addictive option for mild-moderate anxiety; increasingly prescribed as doctors avoid benzodiazepines",
+      controversy: "Sedating side effects limit daytime use; less effective than benzodiazepines for severe anxiety"
+    },
+    {
+      id: 4,
+      name: "Chlordiazepoxide (Librium)",
+      year: 1960,
+      type: "Benzodiazepine",
+      typeAbbreviation: "BZD",
+      classKey: "benzo-long",
+      icon: "🔬",
+      description: "First benzodiazepine, discovered accidentally; revolutionized anxiety treatment with improved safety profile",
+      discoveredBy: "Leo Sternbach at Hoffmann-La Roche",
+      impact: "Launched benzodiazepine era; much safer than barbiturates in overdose; enabled outpatient anxiety treatment",
+      controversy: "Addiction and dependence potential initially underestimated; withdrawal syndrome can be severe and prolonged"
+    },
+    {
+      id: 5,
+      name: "Diazepam (Valium)",
+      year: 1963,
+      type: "Benzodiazepine",
+      typeAbbreviation: "BZD",
+      classKey: "benzo-long",
+      icon: "💫",
+      description: "Most prescribed drug in America during 1970s; cultural icon known as 'mother's little helper'",
+      discoveredBy: "Leo Sternbach at Hoffmann-La Roche",
+      impact: "Became household name; normalized anxiety medication; versatile uses from anxiety to muscle spasms to alcohol withdrawal",
+      controversy: "Overprescribed to women; created pharmaceutical dependence culture; epitomized overmedication of everyday stress"
+    },
+    {
+      id: 6,
+      name: "Clonazepam (Klonopin)",
+      year: 1975,
+      type: "Benzodiazepine",
+      typeAbbreviation: "BZD",
+      classKey: "benzo-long",
+      icon: "🔵",
+      description: "Long-acting benzodiazepine used for panic disorder, anxiety, and seizures",
+      discoveredBy: "Hoffmann-La Roche",
+      impact: "Effective for panic disorder and chronic anxiety; long duration means less frequent dosing",
+      controversy: "Very difficult to discontinue due to long half-life; severe withdrawal syndrome; high dependence potential"
+    },
+    {
+      id: 7,
+      name: "Lorazepam (Ativan)",
+      year: 1977,
+      type: "Benzodiazepine",
+      typeAbbreviation: "BZD",
+      classKey: "benzo-intermediate",
+      icon: "⚡",
+      description: "Intermediate-acting benzodiazepine; widely used for acute anxiety, panic attacks, and hospital settings",
+      discoveredBy: "Wyeth Pharmaceuticals",
+      impact: "Balanced duration and potency; became standard for acute anxiety treatment and medical procedures",
+      controversy: "High potency leads to rapid dependence; commonly involved in polysubstance overdoses"
+    },
+    {
+      id: 8,
+      name: "Alprazolam (Xanax)",
+      year: 1981,
+      type: "Benzodiazepine",
+      typeAbbreviation: "BZD",
+      classKey: "benzo-short",
+      icon: "⚠️",
+      description: "Short-acting, high-potency benzodiazepine; most prescribed psychiatric medication; central to current benzo crisis",
+      discoveredBy: "Upjohn Laboratories (now Pfizer)",
+      impact: "Extremely effective for panic attacks; fast onset made it highly desirable for acute anxiety relief",
+      controversy: "Most abused benzodiazepine; extremely difficult to taper; rebound anxiety between doses; involved in many overdose deaths especially with opioids"
+    },
+    {
+      id: 9,
+      name: "Buspirone (BuSpar)",
+      year: 1986,
+      type: "Azapirone",
+      typeAbbreviation: "5-HT1A",
+      classKey: "azapirone",
+      icon: "🔄",
+      description: "First non-benzodiazepine anxiolytic; serotonin partial agonist without addiction potential",
+      discoveredBy: "Bristol-Myers Squibb",
+      impact: "Proved non-addictive anxiety treatment possible; no sedation or withdrawal; alternative for those with substance abuse history",
+      controversy: "Takes weeks to work unlike instant benzo relief; many patients report inadequate efficacy; failed to replace benzodiazepines despite safety advantages"
+    },
+    {
+      id: 10,
+      name: "Pregabalin (Lyrica)",
+      year: 2004,
+      type: "Gabapentinoid",
+      typeAbbreviation: "GABA analog",
+      classKey: "gabapentinoid",
+      icon: "💊",
+      description: "Approved for nerve pain and seizures; widely used off-label for anxiety as benzodiazepine alternative",
+      discoveredBy: "Richard Bruce Silverman at Northwestern University",
+      impact: "Effective for generalized anxiety disorder; works through calcium channels rather than GABA receptors directly",
+      controversy: "Increasingly recognized abuse potential; euphoric effects at high doses; scheduling debate; some consider it 'new benzo crisis'"
+    }
+  ],
+  stimulants: [
+    {
+      id: 1,
+      name: "Amphetamine (Benzedrine)",
+      year: 1932,
+      type: "Amphetamine",
+      typeAbbreviation: "AMP",
+      classKey: "amphetamine-classic",
+      icon: "⚡",
+      description: "First medical amphetamine, initially marketed as nasal decongestant inhaler before widespread use as stimulant",
+      discoveredBy: "Gordon Alles, marketed by Smith, Kline & French",
+      impact: "Established amphetamines in medicine; widely used for fatigue, depression, weight loss; became WWII 'go pills' for military",
+      controversy: "Massive civilian abuse when people discovered breaking open inhalers produced powerful stimulant effects; led to addiction epidemic"
+    },
+    {
+      id: 2,
+      name: "Methamphetamine (Desoxyn)",
+      year: 1943,
+      type: "Amphetamine",
+      typeAbbreviation: "MAMP",
+      classKey: "methamphetamine",
+      icon: "💥",
+      description: "More potent amphetamine variant; extensively used by all sides during WWII, rarely prescribed today",
+      discoveredBy: "Synthesized in 1893 by Nagai Nagayoshi, medical use began 1940s",
+      impact: "Fueled WWII military operations (German Pervitin, Allied go-pills); showed stimulants' performance-enhancing effects",
+      controversy: "Post-war addiction epidemics; now infamous as illegal street drug 'meth'; minimal legitimate medical use remains"
+    },
+    {
+      id: 3,
+      name: "Methylphenidate (Ritalin)",
+      year: 1955,
+      type: "Phenethylamine",
+      typeAbbreviation: "MPH",
+      classKey: "methylphenidate",
+      icon: "📚",
+      description: "First-line ADHD medication for decades; named after inventor's wife Rita who used it for tennis",
+      discoveredBy: "Leandro Panizzon at CIBA (now Novartis)",
+      impact: "Became standard ADHD treatment; helped millions of children and adults focus; established stimulants as safe and effective for ADHD",
+      controversy: "1990s-2000s prescription explosion raised overprescription concerns; 'drugging children to behave' debates; college study drug misuse"
+    },
+    {
+      id: 4,
+      name: "Dextroamphetamine (Dexedrine)",
+      year: 1976,
+      type: "Amphetamine",
+      typeAbbreviation: "D-AMP",
+      classKey: "dextroamphetamine",
+      icon: "🔬",
+      description: "Purified right-handed isomer of amphetamine with fewer side effects; used for ADHD and narcolepsy",
+      discoveredBy: "Smith, Kline & French (refined from amphetamine)",
+      impact: "Demonstrated isomer separation could improve drug profiles; provided smoother, more targeted stimulant effects",
+      controversy: "Still carries amphetamine addiction potential; widely diverted for non-medical use"
+    },
+    {
+      id: 5,
+      name: "Mixed Amphetamine Salts (Adderall)",
+      year: 1996,
+      type: "Amphetamine",
+      typeAbbreviation: "MAS",
+      classKey: "adderall",
+      icon: "💊",
+      description: "Combination of four amphetamine salts; became most prescribed ADHD medication and notorious college study drug",
+      discoveredBy: "Richwood Pharmaceuticals (acquired by Shire)",
+      impact: "Dominated ADHD treatment market; highly effective but sparked widespread non-medical use in academics and workplaces",
+      controversy: "Massive abuse problem on college campuses; chronic shortages (2022-present); TikTok self-diagnosis trends; addiction concerns"
+    },
+    {
+      id: 6,
+      name: "Modafinil (Provigil)",
+      year: 1998,
+      type: "Eugeroic",
+      typeAbbreviation: "MOD",
+      classKey: "modafinil",
+      icon: "🌟",
+      description: "Wakefulness-promoting agent with unknown mechanism; approved for narcolepsy but widely used off-label for cognitive enhancement",
+      discoveredBy: "Michel Jouvet, developed by Lafon Laboratories",
+      impact: "Provided alternative to traditional stimulants; popular for shift work, jet lag; military use; 'limitless pill' reputation",
+      controversy: "Extensive off-label use for cognitive enhancement; unclear long-term safety; debates over 'neuroenhancement' ethics"
+    },
+    {
+      id: 7,
+      name: "Methylphenidate ER (Concerta)",
+      year: 2000,
+      type: "Phenethylamine",
+      typeAbbreviation: "MPH-ER",
+      classKey: "methylphenidate-er",
+      icon: "⏰",
+      description: "Extended-release methylphenidate using osmotic pump technology; provides smooth 12-hour coverage",
+      discoveredBy: "ALZA Corporation (acquired by Johnson & Johnson)",
+      impact: "Revolutionized ADHD treatment with once-daily dosing; reduced stigma of school nurse visits; improved medication adherence",
+      controversy: "Expensive compared to generic immediate-release; teens learned to defeat extended-release mechanism for abuse"
+    },
+    {
+      id: 8,
+      name: "Atomoxetine (Strattera)",
+      year: 2002,
+      type: "SNRI",
+      typeAbbreviation: "SNRI",
+      classKey: "atomoxetine",
+      icon: "🔄",
+      description: "First non-stimulant ADHD medication; selective norepinephrine reuptake inhibitor without abuse potential",
+      discoveredBy: "Eli Lilly and Company",
+      impact: "Proved ADHD treatable without stimulants; option for patients with substance abuse history or stimulant side effects",
+      controversy: "Takes 4-6 weeks to work unlike immediate stimulant effects; many patients find it less effective; rare suicidal ideation warning"
+    },
+    {
+      id: 9,
+      name: "Lisdexamfetamine (Vyvanse)",
+      year: 2007,
+      type: "Prodrug Amphetamine",
+      typeAbbreviation: "LDX",
+      classKey: "lisdexamfetamine",
+      icon: "🛡️",
+      description: "Prodrug design bonds amphetamine to lysine; body must cleave it for activation, reducing abuse potential",
+      discoveredBy: "Shire Pharmaceuticals (now Takeda)",
+      impact: "Smoothest, longest-lasting amphetamine formulation; can't be snorted or injected effectively; once-daily dosing",
+      controversy: "Expensive with limited generics; still can be abused orally; questioned whether prodrug design truly reduces misuse"
+    },
+    {
+      id: 10,
+      name: "Guanfacine (Intuniv)",
+      year: 2009,
+      type: "Alpha-2 Agonist",
+      typeAbbreviation: "α2",
+      classKey: "guanfacine",
+      icon: "🧠",
+      description: "Non-stimulant alpha-2 adrenergic agonist; enhances prefrontal cortex function without dopamine stimulation",
+      discoveredBy: "Originally for hypertension, repurposed for ADHD by Shire",
+      impact: "Provides stimulant-free option for ADHD; particularly effective for impulsivity and emotional regulation; no abuse potential",
+      controversy: "Sedation and blood pressure effects; less effective than stimulants for many; takes weeks to reach full effect"
+    }
+  ],
+  moodStabilizers: [
+    {
+      id: 1,
+      name: "Lithium",
+      year: 1949,
+      type: "Alkali Metal",
+      typeAbbreviation: "Li",
+      classKey: "lithium",
+      icon: "🪨",
+      description: "Serendipitously discovered by John Cade; first medication to treat and prevent both mania and depression",
+      discoveredBy: "John Cade (Australia)",
+      impact: "Transformed bipolar disorder from chronic institutionalization to manageable condition; gold standard for 75+ years; best suicide prevention",
+      controversy: "Ignored for 20+ years because it couldn't be patented; narrow therapeutic window requires blood monitoring; kidney and thyroid side effects; prescribing declining despite superior evidence"
+    },
+    {
+      id: 2,
+      name: "Carbamazepine (Tegretol)",
+      year: 1974,
+      type: "Anticonvulsant",
+      typeAbbreviation: "CBZ",
+      classKey: "carbamazepine",
+      icon: "⚡",
+      description: "Anticonvulsant repurposed for bipolar disorder; particularly effective for rapid cycling",
+      discoveredBy: "Walter Schindler at Geigy Pharmaceuticals (1953), bipolar use discovered 1970s",
+      impact: "Provided alternative for lithium non-responders; showed anticonvulsants could stabilize mood; established new treatment class",
+      controversy: "Serious drug interactions; requires blood monitoring; rare but dangerous side effects (Stevens-Johnson syndrome, aplastic anemia)"
+    },
+    {
+      id: 3,
+      name: "Valproate (Depakote)",
+      year: 1995,
+      type: "Anticonvulsant",
+      typeAbbreviation: "VPA",
+      classKey: "valproate",
+      icon: "💊",
+      description: "First anticonvulsant FDA-approved for acute mania; faster onset than lithium",
+      discoveredBy: "Pierre Eymard (1962 for epilepsy), Charles Bowden led bipolar trials",
+      impact: "Became first-line alternative to lithium; works faster for acute mania; broader therapeutic window than lithium",
+      controversy: "Severe birth defects (never use in pregnancy); weight gain; tremor; hair loss; associated with polycystic ovary syndrome"
+    },
+    {
+      id: 4,
+      name: "Olanzapine (Zyprexa)",
+      year: 2000,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "olanzapine-bipolar",
+      icon: "🔷",
+      description: "First atypical antipsychotic approved for bipolar mania; highly effective but significant metabolic effects",
+      discoveredBy: "Eli Lilly (1996 for schizophrenia, 2000 for bipolar)",
+      impact: "Established atypical antipsychotics as mood stabilizers; fast-acting for acute mania; no blood monitoring required",
+      controversy: "Substantial weight gain and metabolic syndrome; diabetes risk; some argue lithium abandonment for easier-to-prescribe but more harmful alternatives"
+    },
+    {
+      id: 5,
+      name: "Lamotrigine (Lamictal)",
+      year: 2003,
+      type: "Anticonvulsant",
+      typeAbbreviation: "LTG",
+      classKey: "lamotrigine",
+      icon: "🌙",
+      description: "Rare mood stabilizer that treats bipolar depression rather than just mania; maintenance treatment",
+      discoveredBy: "GlaxoSmithKline",
+      impact: "Filled critical gap - most mood stabilizers only treat mania; became preferred for bipolar II and depression-predominant bipolar",
+      controversy: "Very slow titration required (weeks) to avoid Stevens-Johnson syndrome; doesn't work for acute mania; ineffective without proper titration"
+    },
+    {
+      id: 6,
+      name: "Olanzapine-Fluoxetine (Symbyax)",
+      year: 2003,
+      type: "Combination",
+      typeAbbreviation: "OFC",
+      classKey: "symbyax",
+      icon: "💫",
+      description: "First FDA-approved combination specifically for bipolar depression; pairs atypical antipsychotic with SSRI",
+      discoveredBy: "Eli Lilly",
+      impact: "Validated combination approach; showed antidepressants could be used safely in bipolar if combined with mood stabilizer; addressed treatment-resistant bipolar depression",
+      controversy: "Expensive branded combination when generics available separately; massive weight gain from olanzapine component; questions about whether combination truly superior"
+    },
+    {
+      id: 7,
+      name: "Quetiapine (Seroquel)",
+      year: 2004,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "quetiapine-bipolar",
+      icon: "🌟",
+      description: "Approved for both bipolar mania and depression; unusually versatile mood stabilizer",
+      discoveredBy: "AstraZeneca (1997 for schizophrenia, 2004 for bipolar)",
+      impact: "One of few medications treating both poles of bipolar; became widely prescribed for bipolar depression specifically; flexible dosing",
+      controversy: "Sedating at clinical doses; metabolic side effects; widespread off-label use for insomnia; questions about efficacy at lower doses"
+    },
+    {
+      id: 8,
+      name: "Aripiprazole (Abilify)",
+      year: 2004,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "aripiprazole-bipolar",
+      icon: "⚙️",
+      description: "Partial dopamine agonist approved for bipolar mania; lower metabolic side effects than other atypicals",
+      discoveredBy: "Otsuka/Bristol-Myers Squibb (2002 for schizophrenia, 2004 for bipolar)",
+      impact: "Dopamine stabilizer mechanism offered theoretical advantage; less weight gain than olanzapine/quetiapine; long-acting injectable available for maintenance",
+      controversy: "Activation and akathisia (restlessness) common; less effective for acute mania than other antipsychotics; heavily marketed leading to overuse"
+    },
+    {
+      id: 9,
+      name: "Lurasidone (Latuda)",
+      year: 2013,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "lurasidone",
+      icon: "🌊",
+      description: "Specifically developed and approved for bipolar depression; must be taken with food for absorption",
+      discoveredBy: "Sunovion Pharmaceuticals",
+      impact: "Provided newer option for difficult-to-treat bipolar depression; relatively favorable metabolic profile; once-daily dosing",
+      controversy: "Expensive with limited generic availability; akathisia side effect; requirement to take with 350+ calories complicates adherence"
+    },
+    {
+      id: 10,
+      name: "Cariprazine (Vraylar)",
+      year: 2015,
+      type: "Atypical Antipsychotic",
+      typeAbbreviation: "SGA",
+      classKey: "cariprazine-bipolar",
+      icon: "🔮",
+      description: "Third-generation partial agonist approved for bipolar mania and depression; preferential D3 binding",
+      discoveredBy: "Gedeon Richter/Allergan",
+      impact: "Treats both poles of bipolar; represents continued innovation in dopamine stabilizer approach; very long half-life enables stable dosing",
+      controversy: "Very expensive; long half-life (weeks) means side effects persist long after stopping; unclear if truly superior to older options"
+    }
+  ]
 };
 
-// Optional: Helper function to get all drug classes (useful when you add more classes later)
-function getAllClasses() {
-  return Object.keys(drugClasses);
-}
+// ============================================
+// JOURNEY TEXTS
+// ============================================
 
-// Journey text for each drug class
 const journeyTexts = {
-  antibiotics: {
-    title: "The Journey",
-    text: "The antibiotic era began with accidental discoveries and systematic research that transformed medicine. From Fleming's contaminated petri dish to targeted molecular designs, antibiotics have saved countless lives while sparking an evolutionary arms race with bacteria. This timeline traces humanity's ongoing battle against bacterial infections."
-  },
   antidepressants: {
     title: "The Journey",
     text: "The history of antidepressants began serendipitously in the 1950s when researchers noticed mood improvements in tuberculosis patients. From these accidental discoveries emerged entire classes of medications that would transform mental health treatment, evolving from broad-acting compounds to precisely targeted therapies."
   },
+  antibiotics: {
+    title: "The Journey",
+    text: "The antibiotic era began with accidental discoveries and systematic research that transformed medicine. From Fleming's contaminated petri dish to targeted molecular designs, antibiotics have saved countless lives while sparking an evolutionary arms race with bacteria. This timeline traces humanity's ongoing battle against bacterial infections."
+  },
   antipsychotics: {
     title: "The Journey",
-    text: "The history of antipsychotics began in the 1950s with the discovery of chlorpromazine, which transformed the treatment of schizophrenia and other psychotic disorders. Over time, the field evolved from dopamine-blocking typical antipsychotics to atypical agents with broader receptor profiles, and now to novel compounds targeting entirely new pathways like muscarinic receptors. This journey reflects a growing understanding of the complexity of psychosis and the need for more personalized, tolerable treatments."
+    text: "Before 1950, psychotic disorders meant lifelong institutionalization with barbaric treatments. The accidental discovery of chlorpromazine revolutionized psychiatry, emptying asylums and enabling community care. Yet the journey from chemical restraint to targeted therapy continues, balancing efficacy against debilitating side effects as we seek medications that truly restore rather than merely suppress."
+  },
+  opioids: {
+    title: "The Journey",
+    text: "Opioids represent medicine's greatest paradox: our most effective pain relievers are also among our most dangerous drugs. From ancient poppy cultivation to modern synthetic compounds, this class of medications has both alleviated immense suffering and caused devastating addiction crises. This timeline traces the delicate balance between miracle and tragedy."
+  },
+  anxiolytics: {
+    title: "The Journey",
+    text: "Anxiety treatment evolved from deadly barbiturates to seemingly miraculous benzodiazepines, which dominated medicine for decades. Yet the promise of safe anxiety relief proved elusive—dependence, withdrawal, and overprescription created new crises. While modern alternatives like SSRIs and buspirone offer non-addictive options, they lack the immediate relief that made benzos indispensable. The search for truly safe anxiolytics continues, balancing efficacy against the ever-present shadow of addiction."
+  },
+  stimulants: {
+    title: "The Journey",
+    text: "From accidental discovery in nasal decongestants to fueling WWII armies, stimulants transformed from performance enhancers to essential ADHD treatments. Charles Bradley's 1937 observation that hyperactive children became calmer on Benzedrine sparked decades of research into the 'stimulant paradox.' Today, while medications like Adderall and Ritalin help millions focus, they also fuel academic pressure and substance misuse debates. The search continues for effective treatments that balance therapeutic benefit against abuse potential, as modern alternatives like Vyvanse and non-stimulants offer new approaches to an old challenge."
+  },
+  moodStabilizers: {
+    title: "The Journey",
+    text: "John Cade's 1949 discovery of lithium's antimanic effects—observed in guinea pigs and confirmed in his own body—ranks among psychiatry's greatest breakthroughs. Yet this simple mineral was ignored for decades because it couldn't be patented. When lithium finally gained recognition, it transformed bipolar disorder from a sentence of institutionalization to a manageable condition. The search for alternatives led to anticonvulsants in the 1990s and atypical antipsychotics in the 2000s, though many argue nothing has surpassed lithium's efficacy and suicide prevention. Today's challenge: balancing rapid symptom control against long-term metabolic consequences, while rediscovering lithium's unique benefits."
   }
 };
 
-// Legend/mechanism data for each drug class
+// ============================================
+// LEGEND / MECHANISM DATA
+// ============================================
+
 const legendData = {
   antidepressants: {
     title: "Mechanism Classes",
@@ -479,39 +1005,309 @@ const legendData = {
       }
     ]
   },
-  antipsychotics: {
+   antipsychotics: {
     title: "Mechanism Classes",
     icon: "🧠",
-    description: "Antipsychotics work through various mechanisms to reduce psychotic symptoms, targeting dopamine, serotonin, and other neurotransmitter systems.",
+    description: "Antipsychotics work primarily by modulating dopamine neurotransmission, with newer generations affecting multiple neurotransmitter systems. Their classification reflects evolving understanding of psychosis and attempts to balance efficacy with tolerability.",
     items: [
       {
-        name: "FGA",
-        fullName: "First-Generation Antipsychotic",
-        color: "linear-gradient(135deg, #ff6b6b, #ee5253)",
-        classKey: "fga",
-        mechanism: "Primarily block dopamine D2 receptors in the mesolimbic pathway, reducing positive symptoms but often causing extrapyramidal side effects."
+        name: "First Generation (Typical)",
+        fullName: "First-Generation / Typical Antipsychotics",
+        color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+        classKey: "typical-mechanism",
+        mechanism: "Strongly block dopamine D2 receptors throughout the brain. Effective for positive symptoms (hallucinations, delusions) but cause severe movement disorders due to non-selective dopamine blockade. Include chlorpromazine and haloperidol."
       },
       {
-        name: "SGA",
-        fullName: "Second-Generation Antipsychotic",
-        color: "linear-gradient(135deg, #54a0ff, #2e86de)",
-        classKey: "sga",
-        mechanism: "Block both dopamine D2 and serotonin 5-HT2A receptors, improving tolerability and addressing negative symptoms more effectively."
+        name: "Second Generation (Atypical)",
+        fullName: "Second-Generation / Atypical Antipsychotics",
+        color: "linear-gradient(135deg, #3498db, #2980b9)",
+        classKey: "atypical-mechanism",
+        mechanism: "Block both dopamine D2 and serotonin 5-HT2A receptors with looser D2 binding. Fewer movement side effects but metabolic problems (weight gain, diabetes). Better for negative symptoms. Include risperidone, olanzapine, quetiapine."
       },
       {
-        name: "TGA",
-        fullName: "Third-Generation Antipsychotic",
-        color: "linear-gradient(135deg, #1dd1a1, #10ac84)",
-        classKey: "tga",
-        mechanism: "Act as partial agonists at dopamine D2 and D3 receptors, balancing dopamine activity and reducing side effects like sedation and weight gain."
+        name: "Third Generation (Dopamine Stabilizers)",
+        fullName: "Third-Generation / Dopamine Partial Agonists",
+        color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+        classKey: "third-gen-mechanism",
+        mechanism: "Partial dopamine agonists that stabilize dopamine activity - reduce it when too high, increase when too low. Lower metabolic side effects than second-generation. Include aripiprazole and cariprazine."
       },
       {
-        name: "MRA",
-        fullName: "Muscarinic Receptor Agonist",
-        color: "linear-gradient(135deg, #5f27cd, #341f97)",
-        classKey: "mra",
-        mechanism: "Target muscarinic acetylcholine receptors to modulate brain circuits involved in psychosis, offering a non-dopaminergic approach with fewer motor side effects."
+        name: "Clozapine (Unique)",
+        fullName: "Clozapine - Multi-Receptor Antagonist",
+        color: "linear-gradient(135deg, #f39c12, #e67e22)",
+        classKey: "clozapine-mechanism",
+        mechanism: "Acts on multiple receptor systems (dopamine, serotonin, histamine, cholinergic) with weak D2 binding. Most effective antipsychotic, especially for treatment-resistant cases, but requires blood monitoring due to agranulocytosis risk."
+      },
+      {
+        name: "Movement Side Effects",
+        fullName: "Extrapyramidal Symptoms (EPS)",
+        color: "linear-gradient(135deg, #e67e22, #d35400)",
+        classKey: "eps-info",
+        mechanism: "Movement disorders caused by dopamine D2 blockade in basal ganglia (motor control region). Range from tremor and rigidity to tardive dyskinesia (permanent involuntary movements). Risk decreases from first → second → third generation drugs."
+      }
+    ]
+  },
+  opioids: {
+    title: "Receptor Mechanisms",
+    icon: "🧬",
+    description: "Opioids bind to specific receptors in the nervous system, primarily μ (mu), δ (delta), and κ (kappa) receptors. Their effects depend on receptor type, binding strength, and whether they activate (agonist) or block (antagonist) these receptors.",
+    items: [
+      {
+        name: "Full μ-Agonists",
+        fullName: "Full Mu Opioid Receptor Agonists",
+        color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+        classKey: "full-agonist",
+        mechanism: "Completely activate μ-opioid receptors, producing maximum pain relief, euphoria, and respiratory depression. Include morphine, fentanyl, heroin, and oxycodone. Highest addiction and overdose risk but most effective for severe pain."
+      },
+      {
+        name: "Partial Agonists",
+        fullName: "Partial Mu Opioid Receptor Agonists",
+        color: "linear-gradient(135deg, #f39c12, #e67e22)",
+        classKey: "partial-agonist-mech",
+        mechanism: "Partially activate μ-opioid receptors with a 'ceiling effect' - increasing dose beyond a point produces no additional effect. Buprenorphine is the key example. Safer than full agonists with lower overdose risk, making it ideal for addiction treatment."
+      },
+      {
+        name: "Natural Opioids",
+        fullName: "Natural Opium Alkaloids",
+        color: "linear-gradient(135deg, #27ae60, #229954)",
+        classKey: "natural-mech",
+        mechanism: "Compounds directly extracted from opium poppy (Papaver somniferum) without chemical modification. Morphine and codeine are the primary examples. These established the foundation for all opioid pharmacology."
+      },
+      {
+        name: "Synthetic Opioids",
+        fullName: "Fully Synthetic Opioid Compounds",
+        color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+        classKey: "synthetic-mech",
+        mechanism: "Completely laboratory-synthesized compounds that mimic natural opioids but don't require poppy cultivation. Include fentanyl, methadone, and meperidine. Can be designed for specific properties like duration or potency."
+      },
+      {
+        name: "Antagonists",
+        fullName: "Opioid Receptor Antagonists",
+        color: "linear-gradient(135deg, #3498db, #2980b9)",
+        classKey: "antagonist-mech",
+        mechanism: "Block opioid receptors without activating them, displacing other opioids and rapidly reversing their effects. Naloxone (Narcan) is the critical example, used to reverse overdoses by restoring breathing within minutes."
+      },
+      {
+        name: "Atypical Opioids",
+        fullName: "Atypical Dual-Mechanism Opioids",
+        color: "linear-gradient(135deg, #1abc9c, #16a085)",
+        classKey: "atypical-mech",
+        mechanism: "Combine weak opioid receptor activation with other mechanisms like serotonin/norepinephrine reuptake inhibition. Tramadol is the main example. Initially thought safer, but still carries addiction and side effect risks."
+      }
+    ]
+  },
+  anxiolytics: {
+    title: "Mechanism Classes",
+    icon: "🧠",
+    description: "Anxiolytics reduce anxiety through diverse mechanisms, from enhancing the brain's natural calming system (GABA) to modulating serotonin signaling. The challenge lies in achieving rapid anxiety relief without creating dependence—a balance that remains elusive.",
+    items: [
+      {
+        name: "Barbiturates",
+        fullName: "Barbiturate GABA Modulators",
+        color: "linear-gradient(135deg, #8e44ad, #6c3483)",
+        classKey: "barb-mechanism",
+        mechanism: "Directly activate GABA-A receptors and prolong their opening, strongly enhancing inhibitory neurotransmission. Much more dangerous than benzodiazepines—easy to fatally overdose by suppressing breathing. Largely obsolete for anxiety treatment."
+      },
+      {
+        name: "Benzodiazepines",
+        fullName: "Benzodiazepine GABA Enhancers",
+        color: "linear-gradient(135deg, #3498db, #2980b9)",
+        classKey: "benzo-mechanism",
+        mechanism: "Bind to benzodiazepine site on GABA-A receptors, making GABA more effective (positive allosteric modulators). Don't activate receptors directly, making them safer than barbiturates. Work within minutes but cause tolerance, dependence, and difficult withdrawal."
+      },
+      {
+        name: "Azapirones",
+        fullName: "Serotonin Partial Agonists",
+        color: "linear-gradient(135deg, #1abc9c, #16a085)",
+        classKey: "azap-mechanism",
+        mechanism: "Partial agonists at 5-HT1A serotonin receptors, reducing serotonin activity in anxiety circuits while also affecting dopamine. Non-addictive and no withdrawal, but takes 2-4 weeks to work and many find it less effective than benzodiazepines."
+      },
+      {
+        name: "Antihistamines",
+        fullName: "H1 Histamine Receptor Antagonists",
+        color: "linear-gradient(135deg, #27ae60, #229954)",
+        classKey: "antihist-mechanism",
+        mechanism: "Block histamine H1 receptors in the brain, producing sedation and mild anxiolytic effects. Also have anticholinergic properties. Non-addictive but less potent than benzodiazepines; useful for mild anxiety or as benzo alternative."
+      },
+      {
+        name: "Gabapentinoids",
+        fullName: "Voltage-Gated Calcium Channel Blockers",
+        color: "linear-gradient(135deg, #e67e22, #d35400)",
+        classKey: "gabap-mechanism",
+        mechanism: "Bind to α2δ subunit of voltage-gated calcium channels, reducing release of excitatory neurotransmitters. Structurally similar to GABA but doesn't act on GABA receptors. Growing recognition of abuse potential despite initial belief they were safe."
+      },
+      {
+        name: "The Benzo Paradox",
+        fullName: "Why Benzos Remain Dominant Despite Risks",
+        color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+        classKey: "paradox-info",
+        mechanism: "Benzodiazepines work within 15-30 minutes and are remarkably effective for acute anxiety and panic. No other drug class matches this rapid, reliable relief. This makes them irreplaceable for many patients despite addiction risks, creating an ongoing medical dilemma."
+      }
+    ]
+  },
+  stimulants: {
+    title: "Mechanism Classes",
+    icon: "⚡",
+    description: "Stimulants increase dopamine and norepinephrine in the prefrontal cortex, enhancing focus and executive function. Different mechanisms and formulations balance efficacy, duration, and abuse potential.",
+    items: [
+      {
+        name: "Amphetamines",
+        fullName: "Amphetamine Dopamine Releasers",
+        color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+        classKey: "amp-mechanism",
+        mechanism: "Enter dopamine neurons and reverse the dopamine transporter, actively pumping dopamine OUT into the synapse. Also trigger vesicular dopamine release. Create massive, rapid dopamine increases. Most potent stimulants but highest abuse potential. Include Adderall, Dexedrine, Vyvanse."
+      },
+      {
+        name: "Methylphenidate",
+        fullName: "Dopamine Reuptake Inhibitors",
+        color: "linear-gradient(135deg, #3498db, #2980b9)",
+        classKey: "mph-mechanism",
+        mechanism: "Block dopamine transporter preventing reuptake, but don't trigger dopamine release. More subtle mechanism than amphetamines. Still highly effective for ADHD with slightly lower (though still significant) abuse potential. Include Ritalin and Concerta."
+      },
+      {
+        name: "Prodrug Designs",
+        fullName: "Abuse-Deterrent Prodrugs",
+        color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+        classKey: "prodrug-mechanism",
+        mechanism: "Inactive until body metabolically converts them to active drug. Vyvanse binds amphetamine to lysine; red blood cells must cleave the bond. Prevents rapid onset from snorting/injecting. Provides smoother, longer-lasting effects but can still be abused orally."
+      },
+      {
+        name: "Wakefulness Promoters",
+        fullName: "Eugeroics (Wakefulness Agents)",
+        color: "linear-gradient(135deg, #f39c12, #e67e22)",
+        classKey: "eugeroic-mechanism",
+        mechanism: "Mechanism not fully understood. Modafinil increases dopamine, histamine, and orexin. Promotes wakefulness without classic stimulant effects. Less euphoric than amphetamines, making it somewhat less prone to abuse. Used for narcolepsy and shift work disorder."
+      },
+      {
+        name: "Non-Stimulants",
+        fullName: "Non-Stimulant ADHD Medications",
+        color: "linear-gradient(135deg, #1abc9c, #16a085)",
+        classKey: "nonstim-mechanism",
+        mechanism: "Don't directly increase dopamine. Atomoxetine blocks norepinephrine reuptake (SNRI). Guanfacine is alpha-2 agonist enhancing prefrontal cortex signaling. No abuse potential but take weeks to work and often less effective than stimulants. Better for patients with substance abuse history."
+      },
+      {
+        name: "The Stimulant Paradox",
+        fullName: "Why Stimulants Calm ADHD",
+        color: "linear-gradient(135deg, #27ae60, #229954)",
+        classKey: "paradox-stim",
+        mechanism: "ADHD brains have underactive prefrontal cortex and low dopamine signaling. Stimulants 'wake up' the PFC by increasing dopamine/norepinephrine, enabling focus and impulse control. Appears calming because the brain finally has the neurochemistry to self-regulate. In non-ADHD brains with normal dopamine, stimulants cause classic 'high' and hyperactivity."
+      }
+    ]
+  },
+  moodStabilizers: {
+    title: "Mechanism Classes",
+    icon: "⚖️",
+    description: "Mood stabilizers prevent both manic and depressive episodes through diverse mechanisms—from lithium's mysterious intracellular effects to anticonvulsants' membrane stabilization to antipsychotics' dopamine modulation. The challenge: finding medications that stabilize both poles without causing their own harm.",
+    items: [
+      {
+        name: "Lithium",
+        fullName: "Lithium - The Original Mood Stabilizer",
+        color: "linear-gradient(135deg, #3498db, #2980b9)",
+        classKey: "lithium-mechanism",
+        mechanism: "Mechanism still not fully understood after 75 years. Alters intracellular signaling (affects inositol, GSK-3β enzyme), modulates circadian rhythms, affects mitochondrial function, and is neuroprotective. Prevents both mania and depression. Best evidence for suicide prevention. Narrow therapeutic window requires blood monitoring."
+      },
+      {
+        name: "Anticonvulsants",
+        fullName: "Anticonvulsant Mood Stabilizers",
+        color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+        classKey: "anticonvulsant-mood",
+        mechanism: "Stabilize neuronal membranes by blocking sodium/calcium channels and enhancing GABA inhibition. Originally developed for epilepsy, discovered to prevent mood cycling. Valproate best for acute mania, carbamazepine for rapid cycling, lamotrigine uniquely treats bipolar depression. Mechanism explains mood stability through reduced neuronal excitability."
+      },
+      {
+        name: "Atypical Antipsychotics",
+        fullName: "Atypical Antipsychotics as Mood Stabilizers",
+        color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+        classKey: "antipsychotic-mood",
+        mechanism: "Block dopamine D2 and serotonin 5-HT2A receptors. Dopamine blockade treats manic symptoms (overactivity, impulsivity, psychosis). Some also treat bipolar depression through mechanisms not fully understood. Work faster than lithium (days vs weeks) making them preferred for acute mania, but significant metabolic side effects."
+      },
+      {
+        name: "Combination Therapy",
+        fullName: "Combination Approaches",
+        color: "linear-gradient(135deg, #f39c12, #e67e22)",
+        classKey: "combination-mood",
+        mechanism: "Symbyax combines olanzapine (prevents mania switch) with fluoxetine (treats depression). Validates careful antidepressant use in bipolar when paired with antimanic agent. Many patients require multiple medications—mood stabilizer plus antipsychotic is common. Balances efficacy against polypharmacy risks."
+      },
+      {
+        name: "The Two-Pole Challenge",
+        fullName: "Why Bipolar is Hard to Treat",
+        color: "linear-gradient(135deg, #1abc9c, #16a085)",
+        classKey: "bipolar-challenge",
+        mechanism: "Most medications treat mania OR depression, not both. Antidepressants risk triggering mania ('switching'). Antimanic agents may worsen depression. Few drugs (lithium, quetiapine, lamotrigine, cariprazine) address both poles. Treatment often requires combination therapy, complicating side effect management and adherence."
+      },
+      {
+        name: "The Lithium Paradox",
+        fullName: "Why Lithium Remains Unmatched",
+        color: "linear-gradient(135deg, #27ae60, #229954)",
+        classKey: "lithium-paradox",
+        mechanism: "Despite 75+ years since discovery, lithium remains most effective mood stabilizer with best suicide prevention data. Yet prescribing has declined as doctors favor atypical antipsychotics (no blood tests needed). This shift trades lithium's inconvenience for atypicals' metabolic disasters (obesity, diabetes). Many consider this a concerning trend away from evidence-based practice."
       }
     ]
   }
 };
+
+// ============================================
+// CONDITION INFORMATION
+// ============================================
+
+const conditionInfo = {
+  antidepressants: {
+    name: "Major Depressive Disorder (MDD)",
+    icon: "🧠",
+    description: "Depression is more than sadness—it's a persistent inability to experience pleasure or maintain normal mood. The brain's emotional regulation systems fail, causing profound changes in thinking, behavior, and physical health.",
+    pathophysiology: "Involves reduced serotonin, norepinephrine, and dopamine signaling in mood-regulating circuits. Decreased neuroplasticity (BDNF), chronic stress-induced changes to the HPA axis, and inflammation contribute. Brain imaging shows reduced activity in prefrontal cortex and hippocampus, with hyperactive amygdala driving negative emotional processing.",
+    prevalence: "Affects ~7% of US adults annually, with 20-25% lifetime risk. Twice as common in women. Average age of onset is mid-20s, though it can begin at any age."
+  },
+
+  antibiotics: {
+    name: "Bacterial Infections",
+    icon: "🦠",
+    description: "Bacterial infections occur when pathogenic bacteria invade the body, multiply, and cause disease. Unlike viruses, bacteria are living single-celled organisms that can be killed by targeting their unique cellular structures and metabolic processes.",
+    pathophysiology: "Bacteria cause disease through direct tissue damage, toxin production, and triggering inflammatory immune responses. They possess cell walls, ribosomes, and metabolic pathways distinct from human cells—these differences allow antibiotics to selectively target bacteria while sparing human tissue. Antibiotic resistance evolves when bacteria develop mutations or acquire resistance genes.",
+    prevalence: "Bacterial infections remain among the leading causes of death globally, though antibiotic availability has dramatically reduced mortality. Antibiotic-resistant infections now kill ~1.3 million people annually worldwide, a growing crisis threatening modern medicine's foundations."
+  },
+
+  antipsychotics: {
+    name: "Psychotic Disorders (Schizophrenia)",
+    icon: "👁️",
+    description: "Psychosis involves losing touch with reality through hallucinations (sensing things that aren't there) and delusions (fixed false beliefs). Schizophrenia is the prototypical psychotic disorder, characterized by positive symptoms (psychosis), negative symptoms (emotional flattening, social withdrawal), and cognitive deficits.",
+    pathophysiology: "The dopamine hypothesis suggests excessive dopamine activity in mesolimbic pathways causes positive symptoms, while reduced dopamine in prefrontal cortex contributes to negative symptoms and cognitive issues. Glutamate dysfunction (NMDA receptor hypofunction) and neurodevelopmental abnormalities also play roles. Brain imaging shows enlarged ventricles, reduced gray matter in prefrontal and temporal regions.",
+    prevalence: "Schizophrenia affects ~1% of the population worldwide. Onset typically occurs in late teens to early 30s, earlier in men. Psychotic symptoms also occur in bipolar disorder, severe depression, substance use, and other conditions."
+  },
+
+  opioids: {
+    name: "Pain (Acute and Chronic)",
+    icon: "⚡",
+    description: "Pain is an unpleasant sensory and emotional experience signaling tissue damage or potential harm. Acute pain (injury, surgery) serves protective functions, while chronic pain persists beyond healing and becomes a disease itself. Pain involves both physical sensations and emotional suffering.",
+    pathophysiology: "Pain signals travel from nerve endings through the spinal cord to the brain's thalamus and cortex. Tissue damage releases inflammatory chemicals activating nociceptors. The brain has endogenous opioid systems (endorphins, enkephalins) that naturally suppress pain. Chronic pain involves neuroplastic changes—'wind-up' in spinal cord and brain hypersensitivity—where pain circuits become overactive even without ongoing tissue damage.",
+    prevalence: "Chronic pain affects ~20% of US adults (50+ million people). Leading cause of disability worldwide. The opioid crisis has killed over 500,000 Americans since 1999, demonstrating the tragic tension between pain relief and addiction risk."
+  },
+
+  anxiolytics: {
+    name: "Anxiety Disorders",
+    icon: "😰",
+    description: "Anxiety disorders involve excessive, persistent fear and worry that interferes with daily functioning. Unlike normal stress responses, pathological anxiety occurs without real threat or persists long after danger passes. Includes generalized anxiety disorder (GAD), panic disorder, social anxiety, and phobias.",
+    pathophysiology: "The brain's fear circuit becomes hyperactive—amygdala overreacts to perceived threats while prefrontal cortex fails to inhibit these false alarms. Low GABA (brain's 'brake' neurotransmitter) and high glutamate (excitatory) create neuronal hyperexcitability. Dysregulated norepinephrine and serotonin, along with heightened stress hormone (cortisol) responses, maintain chronic anxiety states.",
+    prevalence: "Most common mental health condition: ~30% lifetime prevalence. Affects 18% of US adults annually. Twice as common in women. Often co-occurs with depression. Panic disorder affects 2-3% of adults; social anxiety disorder 7%."
+  },
+
+  stimulants: {
+    name: "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+    icon: "🎯",
+    description: "ADHD is a neurodevelopmental disorder characterized by persistent inattention, hyperactivity, and impulsivity that impairs functioning. It's not just 'being hyper'—it's a fundamental difference in brain executive function, self-regulation, and reward processing. Three subtypes exist: predominantly inattentive, hyperactive-impulsive, or combined.",
+    pathophysiology: "ADHD involves underactive prefrontal cortex (executive function center) and deficient dopamine/norepinephrine signaling in attention and reward circuits. The brain constantly seeks stimulation because baseline arousal is too low. Structural imaging shows smaller prefrontal cortex, basal ganglia, and cerebellum. The default mode network (brain's 'idle' state) fails to quiet during tasks, causing internal distraction.",
+    prevalence: "Affects 8-10% of children and 4-5% of adults. More commonly diagnosed in boys (2:1 ratio) though girls often underdiagnosed due to presenting with inattentive rather than hyperactive symptoms. 60% of childhood cases persist into adulthood."
+  },
+
+  moodStabilizers: {
+    name: "Bipolar Disorder",
+    icon: "⚖️",
+    description: "Bipolar disorder involves cycling between extreme mood states—manic episodes (elevated mood, decreased sleep, impulsivity, racing thoughts) and depressive episodes (low mood, fatigue, hopelessness). Unlike normal mood fluctuations, these episodes are severe, prolonged, and interfere profoundly with functioning. Bipolar I involves full mania; Bipolar II involves milder hypomania with severe depression.",
+    pathophysiology: "Involves dysregulated neurotransmitter cycling (dopamine, serotonin, norepinephrine swing between extremes), circadian rhythm disruption (sleep-wake cycle dysfunction triggers episodes), mitochondrial energy metabolism problems, and ion channel abnormalities. The 'kindling hypothesis' suggests episodes become more frequent over time as neural pathways strengthen, like epileptic seizures. Neuroplasticity is impaired, with gray matter loss in prefrontal regions.",
+    prevalence: "Affects ~2.8% of US adults (Bipolar I and II combined). Onset typically in late teens to early 20s. Equal prevalence between sexes, though women experience more depressive episodes. High suicide risk—20-30x general population. Strong genetic component (~80% heritability)."
+  }
+};
+
+// Optional: Helper function to get all drug classes
+function getAllClasses() {
+  return Object.keys(drugClasses);
+}

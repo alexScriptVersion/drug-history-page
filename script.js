@@ -57,8 +57,11 @@ function renderDrugClass(className) {
   
   // 7. Update the journey section
   updateJourneySection(className);
+
+  // 8. Update the condition section
+  updateConditionSection(className);
   
-  // 8. Update the legend section
+  // 9. Update the legend section
   updateLegendSection(className);
 }
 
@@ -113,6 +116,44 @@ function updateLegendSection(className) {
     
     legendItemsContainer.appendChild(legendItem);
   });
+}
+
+// ============================================
+// UPDATE CONDITION SECTION
+// ============================================
+
+function updateConditionSection(className) {
+  const condition = conditionInfo[className];
+  
+  // Update the condition content
+  document.querySelector('.condition-icon').textContent = condition.icon;
+  document.querySelector('.condition-name').textContent = condition.name;
+  document.querySelector('.condition-description').textContent = condition.description;
+  document.querySelector('.condition-pathophysiology').textContent = condition.pathophysiology;
+  document.querySelector('.condition-prevalence').textContent = condition.prevalence;
+  
+  // Collapse the section when switching drug classes
+  const conditionContent = document.querySelector('.condition-content');
+  const expandBtn = document.querySelector('.condition-expand-btn');
+  conditionContent.classList.remove('visible');
+  expandBtn.textContent = 'Learn more ▼';
+}
+
+// ============================================
+// TOGGLE CONDITION SECTION
+// ============================================
+
+function toggleConditionSection() {
+  const conditionContent = document.querySelector('.condition-content');
+  const expandBtn = document.querySelector('.condition-expand-btn');
+  
+  if (conditionContent.classList.contains('visible')) {
+    conditionContent.classList.remove('visible');
+    expandBtn.textContent = 'Learn more ▼';
+  } else {
+    conditionContent.classList.add('visible');
+    expandBtn.textContent = 'Show less ▲';
+  }
 }
 
 // ============================================
