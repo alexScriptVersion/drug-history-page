@@ -864,7 +864,139 @@ const drugClasses = {
       impact: "Treats both poles of bipolar; represents continued innovation in dopamine stabilizer approach; very long half-life enables stable dosing",
       controversy: "Very expensive; long half-life (weeks) means side effects persist long after stopping; unclear if truly superior to older options"
     }
-  ]
+  ],
+  diabetes: [
+  {
+    id: 1,
+    name: "Insulin (Animal-derived)",
+    year: 1922,
+    type: "Pancreatic Extract Hormone",
+    typeAbbreviation: "INS",
+    classKey: "insulin-animal",
+    icon: "💉",
+    description: "First effective diabetes treatment, extracted from animal pancreases; transformed diabetes from death sentence to manageable condition",
+    discoveredBy: "Frederick Banting, Charles Best, and J.J.R. Macleod",
+    impact: "One of medicine's greatest breakthroughs; children dying from diabetic coma could be saved within hours. Banting and Macleod won Nobel Prize in 1923.",
+    controversy: "Banting was furious Macleod shared the Nobel Prize despite minimal involvement; Banting split his prize money with Best. Early insulin caused allergic reactions and required multiple daily injections."
+  },
+  {
+    id: 2,
+    name: "NPH Insulin (Isophane)",
+    year: 1946,
+    type: "Intermediate-acting Insulin",
+    typeAbbreviation: "NPH",
+    classKey: "insulin-nph",
+    icon: "⏱️",
+    description: "First longer-acting insulin using protamine to slow absorption; reduced injection frequency from 4-6 to 2 times daily",
+    discoveredBy: "Hans Christian Hagedorn",
+    impact: "Dramatically improved quality of life by reducing daily injections; became standard basal insulin for decades until insulin analogs",
+    controversy: "Variable absorption and peak times caused unpredictable blood sugars; 'NPH peaks' led to hypoglycemia requiring perfectly timed meals"
+  },
+  {
+    id: 3,
+    name: "Metformin (Glucophage)",
+    year: 1957,
+    type: "Biguanide",
+    typeAbbreviation: "BIG",
+    classKey: "biguanide",
+    icon: "💊",
+    description: "Derived from French lilac herb used in medieval medicine; reduces liver glucose production without causing hypoglycemia",
+    discoveredBy: "Jean Sterne at Laboratoires Aron (based on earlier biguanide research)",
+    impact: "Most prescribed diabetes medication globally; first-line therapy for type 2 diabetes. Cardiovascular benefits beyond glucose control. Dirt cheap as generic.",
+    controversy: "Delayed FDA approval until 1994 due to fears about lactic acidosis (seen with different biguanide phenformin). French lilac historically used as diuretic, not diabetes treatment."
+  },
+  {
+    id: 4,
+    name: "Tolbutamide (Orinase)",
+    year: 1956,
+    type: "Sulfonylurea",
+    typeAbbreviation: "SU",
+    classKey: "sulfonylurea",
+    icon: "🔑",
+    description: "First oral diabetes medication; stimulates pancreas to release insulin by closing potassium channels in beta cells",
+    discoveredBy: "Discovered at Hoechst AG; developed from sulfonamide antibiotics research",
+    impact: "Proved type 2 diabetes could be treated with pills, not just insulin injections. Revolutionized diabetes care for millions.",
+    controversy: "1970 UGDP study suggested increased cardiovascular deaths, sparking decades of debate. Causes weight gain and hypoglycemia. Many patients eventually require insulin anyway."
+  },
+  {
+    id: 5,
+    name: "Acarbose (Precose)",
+    year: 1990,
+    type: "Alpha-Glucosidase Inhibitor",
+    typeAbbreviation: "AGI",
+    classKey: "alpha-glucosidase",
+    icon: "🛡️",
+    description: "Blocks intestinal enzymes that break down complex carbohydrates, slowing glucose absorption after meals",
+    discoveredBy: "Bayer AG, isolated from Actinoplanes bacteria",
+    impact: "First drug targeting post-meal glucose spikes; demonstrated multiple mechanisms could treat diabetes. Modest efficacy but no hypoglycemia risk.",
+    controversy: "Severe gastrointestinal side effects (gas, bloating, diarrhea) limit use. Must be taken with every meal. Never achieved widespread adoption despite theoretical appeal."
+  },
+  {
+    id: 6,
+    name: "Rosiglitazone (Avandia)",
+    year: 1999,
+    type: "Thiazolidinedione",
+    typeAbbreviation: "TZD",
+    classKey: "thiazolidinedione",
+    icon: "🔬",
+    description: "PPAR-gamma agonist that increases insulin sensitivity in muscle and fat tissue; reduces insulin resistance",
+    discoveredBy: "GlaxoSmithKline",
+    impact: "Addressed insulin resistance directly rather than just increasing insulin. Showed diabetes could be treated by improving insulin action, not just increasing insulin.",
+    controversy: "2007 meta-analysis linked to increased heart attack risk, leading to severe FDA restrictions. Also causes weight gain, fluid retention, heart failure, bone fractures. Largely abandoned despite efficacy."
+  },
+  {
+    id: 7,
+    name: "Exenatide (Byetta)",
+    year: 2005,
+    type: "GLP-1 Receptor Agonist",
+    typeAbbreviation: "GLP-1",
+    classKey: "glp1-agonist",
+    icon: "🦎",
+    description: "Synthetic version of protein found in Gila monster saliva; mimics incretin hormone GLP-1 to increase insulin and decrease glucagon",
+    discoveredBy: "Discovered by John Eng; developed by Amylin/Eli Lilly from Gila monster venom compound exendin-4",
+    impact: "First incretin mimetic; caused weight LOSS unlike other diabetes drugs. Revolutionized type 2 diabetes treatment. Led to blockbuster drugs Ozempic, Wegovy, Mounjaro.",
+    controversy: "Injectable only, nausea common. Pancreatitis concerns debated for years. Now explosively popular for weight loss (often off-label), causing shortages for diabetics."
+  },
+  {
+    id: 8,
+    name: "Sitagliptin (Januvia)",
+    year: 2006,
+    type: "DPP-4 Inhibitor",
+    typeAbbreviation: "DPP-4",
+    classKey: "dpp4-inhibitor",
+    icon: "🔐",
+    description: "Blocks enzyme that breaks down incretin hormones, extending their glucose-lowering effects without injections",
+    discoveredBy: "Merck",
+    impact: "First oral incretin-based therapy; well-tolerated with low side effects. Proved incretin pathway could be targeted multiple ways (agonists vs enzyme inhibitors).",
+    controversy: "Expensive with modest efficacy. Pancreatitis concerns similar to GLP-1 agonists. Overshadowed by more effective GLP-1 drugs despite being pills. Cardiovascular outcome trials showed 'non-inferiority' not superiority."
+  },
+  {
+    id: 9,
+    name: "Canagliflozin (Invokana)",
+    year: 2013,
+    type: "SGLT2 Inhibitor",
+    typeAbbreviation: "SGLT2",
+    classKey: "sglt2-inhibitor",
+    icon: "⚡",
+    description: "Makes kidneys excrete excess glucose in urine; entirely novel mechanism independent of insulin",
+    discoveredBy: "Janssen Pharmaceuticals",
+    impact: "Revolutionary insulin-independent mechanism. Unexpected cardiovascular and kidney protective benefits transformed diabetes care. Weight loss bonus. Major paradigm shift.",
+    controversy: "Increased genital yeast infections and urinary tract infections. Rare but serious: diabetic ketoacidosis even with normal blood sugar, Fournier's gangrene (flesh-eating infection), lower limb amputations with canagliflozin."
+  },
+  {
+    id: 10,
+    name: "Semaglutide (Ozempic/Wegovy)",
+    year: 2017,
+    type: "Long-acting GLP-1 Receptor Agonist",
+    typeAbbreviation: "GLP-1",
+    classKey: "glp1-long",
+    icon: "🌟",
+    description: "Once-weekly GLP-1 agonist; same class as exenatide but longer-acting with dramatic weight loss (15%+ body weight)",
+    discoveredBy: "Novo Nordisk",
+    impact: "Cultural phenomenon; transformed obesity treatment. Showed diabetes drugs could have massive cardiometabolic benefits. Ozempic became household name. Oral version (Rybelsus) first oral GLP-1.",
+    controversy: "Massive shortage due to off-label weight loss prescribing by celebrities and non-diabetics. Extremely expensive (~$1000/month). 'Ozempic face' from rapid weight loss. Rebound weight gain when stopped. Equity concerns about access."
+  }
+]
 };
 
 // ============================================
@@ -899,7 +1031,11 @@ const journeyTexts = {
   moodStabilizers: {
     title: "The Journey",
     text: "John Cade's 1949 discovery of lithium's antimanic effects—observed in guinea pigs and confirmed in his own body—ranks among psychiatry's greatest breakthroughs. Yet this simple mineral was ignored for decades because it couldn't be patented. When lithium finally gained recognition, it transformed bipolar disorder from a sentence of institutionalization to a manageable condition. The search for alternatives led to anticonvulsants in the 1990s and atypical antipsychotics in the 2000s, though many argue nothing has surpassed lithium's efficacy and suicide prevention. Today's challenge: balancing rapid symptom control against long-term metabolic consequences, while rediscovering lithium's unique benefits."
-  }
+  },
+  diabetes: {
+  title: "The Journey",
+  text: "Diabetes treatment began with one of medicine's most dramatic moments: children dying in hospital wards awakening within hours of receiving the first insulin injections in 1922. From animal pancreas extracts to pills that make kidneys excrete sugar, diabetes medications trace humanity's evolving understanding of metabolism. Each breakthrough—from oral medications in the 1950s to weight-loss wonder drugs in the 2020s—has redefined what's possible, though the holy grail of a cure remains elusive."
+}
 };
 
 // ============================================
@@ -1242,7 +1378,70 @@ const legendData = {
         mechanism: "Despite 75+ years since discovery, lithium remains most effective mood stabilizer with best suicide prevention data. Yet prescribing has declined as doctors favor atypical antipsychotics (no blood tests needed). This shift trades lithium's inconvenience for atypicals' metabolic disasters (obesity, diabetes). Many consider this a concerning trend away from evidence-based practice."
       }
     ]
-  }
+  },
+  diabetes: {
+  title: "Mechanism Classes",
+  icon: "🔬",
+  description: "Diabetes medications work through remarkably diverse mechanisms—from replacing missing insulin to blocking kidney glucose reabsorption to mimicking lizard venom. Modern therapy often combines multiple mechanisms.",
+  items: [
+    {
+      name: "Insulin",
+      fullName: "Exogenous Insulin Replacement",
+      color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+      classKey: "insulin-mechanism",
+      mechanism: "Replaces or supplements the body's own insulin hormone. Allows glucose to enter cells from bloodstream. Essential for type 1 diabetes where pancreas produces no insulin. Type 2 diabetes may eventually require insulin when other mechanisms fail. Modern analogs engineered for faster/slower action."
+    },
+    {
+      name: "Biguanides",
+      fullName: "Hepatic Glucose Production Inhibitors",
+      color: "linear-gradient(135deg, #3498db, #2980b9)",
+      classKey: "biguanide-mechanism",
+      mechanism: "Primarily reduce glucose production by the liver (gluconeogenesis). Also improve insulin sensitivity in muscle and fat tissue. Work through activation of AMP-activated protein kinase (AMPK), a cellular energy sensor. Do not cause hypoglycemia alone because they don't increase insulin."
+    },
+    {
+      name: "Sulfonylureas",
+      fullName: "Insulin Secretagogues",
+      color: "linear-gradient(135deg, #f39c12, #e67e22)",
+      classKey: "sulfonylurea-mechanism",
+      mechanism: "Bind to ATP-sensitive potassium channels on pancreatic beta cells, causing them to close. This depolarizes the cell membrane, triggering insulin release. Work regardless of blood glucose level, causing hypoglycemia risk. Require functioning pancreatic beta cells to work."
+    },
+    {
+      name: "Thiazolidinediones",
+      fullName: "Insulin Sensitizers",
+      color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+      classKey: "tzd-mechanism",
+      mechanism: "Activate PPAR-gamma nuclear receptors in fat and muscle tissue, improving insulin sensitivity. Reduce insulin resistance by altering fat distribution and adipokine secretion. Help glucose enter cells more efficiently. Take weeks to reach full effect as they change gene expression."
+    },
+    {
+      name: "GLP-1 Agonists",
+      fullName: "Incretin Mimetics",
+      color: "linear-gradient(135deg, #1abc9c, #16a085)",
+      classKey: "glp1-mechanism",
+      mechanism: "Mimic GLP-1 (glucagon-like peptide-1), a gut hormone released after eating. Increase glucose-dependent insulin secretion (only when blood sugar is high), suppress glucagon, slow gastric emptying, and reduce appetite. Significant weight loss effect. Cardioprotective benefits beyond glucose control."
+    },
+    {
+      name: "DPP-4 Inhibitors",
+      fullName: "Incretin Enhancers",
+      color: "linear-gradient(135deg, #95a5a6, #7f8c8d)",
+      classKey: "dpp4-mechanism",
+      mechanism: "Block dipeptidyl peptidase-4 (DPP-4), the enzyme that rapidly breaks down incretin hormones like GLP-1 and GIP. This prolongs the action of naturally released incretins after meals. More modest glucose-lowering than GLP-1 agonists but oral and well-tolerated."
+    },
+    {
+      name: "SGLT2 Inhibitors",
+      fullName: "Renal Glucose Reabsorption Inhibitors",
+      color: "linear-gradient(135deg, #e67e22, #d35400)",
+      classKey: "sglt2-mechanism",
+      mechanism: "Block sodium-glucose cotransporter-2 in kidney proximal tubules, preventing glucose reabsorption. Causes glucose excretion in urine (glycosuria). Insulin-independent mechanism. Unexpected benefits: cardiovascular protection, heart failure improvement, chronic kidney disease slowing. Causes osmotic diuresis."
+    },
+    {
+      name: "Alpha-Glucosidase Inhibitors",
+      fullName: "Carbohydrate Absorption Blockers",
+      color: "linear-gradient(135deg, #27ae60, #229954)",
+      classKey: "agi-mechanism",
+      mechanism: "Inhibit intestinal enzymes (alpha-glucosidase) that break down complex carbohydrates into absorbable simple sugars. Slows carbohydrate digestion and absorption, blunting post-meal glucose spikes. Must be taken with meals. Undigested carbs reach colon causing gas and diarrhea."
+    }
+  ]
+}
 };
 
 // ============================================
@@ -1304,7 +1503,15 @@ const conditionInfo = {
     description: "Bipolar disorder involves cycling between extreme mood states—manic episodes (elevated mood, decreased sleep, impulsivity, racing thoughts) and depressive episodes (low mood, fatigue, hopelessness). Unlike normal mood fluctuations, these episodes are severe, prolonged, and interfere profoundly with functioning. Bipolar I involves full mania; Bipolar II involves milder hypomania with severe depression.",
     pathophysiology: "Involves dysregulated neurotransmitter cycling (dopamine, serotonin, norepinephrine swing between extremes), circadian rhythm disruption (sleep-wake cycle dysfunction triggers episodes), mitochondrial energy metabolism problems, and ion channel abnormalities. The 'kindling hypothesis' suggests episodes become more frequent over time as neural pathways strengthen, like epileptic seizures. Neuroplasticity is impaired, with gray matter loss in prefrontal regions.",
     prevalence: "Affects ~2.8% of US adults (Bipolar I and II combined). Onset typically in late teens to early 20s. Equal prevalence between sexes, though women experience more depressive episodes. High suicide risk—20-30x general population. Strong genetic component (~80% heritability)."
-  }
+  },
+
+  diabetes: {
+  name: "Diabetes Mellitus (Type 1 & Type 2)",
+  icon: "🩸",
+  description: "Diabetes is a metabolic disorder where the body cannot properly regulate blood glucose levels. Type 1 diabetes (5-10% of cases) is an autoimmune destruction of insulin-producing pancreatic beta cells, requiring lifelong insulin. Type 2 diabetes (90-95%) involves insulin resistance where cells don't respond properly to insulin, plus progressive beta cell dysfunction.",
+  pathophysiology: "In type 1, autoimmune destruction eliminates insulin production entirely—no insulin means glucose cannot enter cells and accumulates in blood to dangerous levels. Type 2 is more complex: peripheral tissues (muscle, fat, liver) become resistant to insulin's signals (insulin resistance), forcing the pancreas to produce more insulin (hyperinsulinemia). Eventually beta cells become exhausted and fail, requiring exogenous insulin. Chronic hyperglycemia causes micro- and macrovascular damage through multiple mechanisms: glycation of proteins (forming AGEs), oxidative stress, inflammation, and metabolic dysfunction affecting every organ system.",
+  prevalence: "Diabetes affects 537 million adults worldwide (10.5% of population), projected to reach 783 million by 2045. In the US: 37 million people (11.3%). Type 2 accounts for 90-95% of cases. Leading cause of blindness, kidney failure, and lower limb amputations. Diabetes prevalence has quadrupled since 1980, driven by obesity and aging populations. 96 million US adults have prediabetes."
+}
 };
 
 // Optional: Helper function to get all drug classes

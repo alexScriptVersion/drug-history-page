@@ -483,6 +483,37 @@ h1 {
     box-shadow: 0 0 0 4px #16a085;
 }
 
+/* Diabetes colors */
+.timeline-item.insulin-animal::before {
+    box-shadow: 0 0 0 4px #e74c3c;
+}
+.timeline-item.insulin-nph::before {
+    box-shadow: 0 0 0 4px #c0392b;
+}
+.timeline-item.biguanide::before {
+    box-shadow: 0 0 0 4px #3498db;
+}
+.timeline-item.sulfonylurea::before {
+    box-shadow: 0 0 0 4px #f39c12;
+}
+.timeline-item.alpha-glucosidase::before {
+    box-shadow: 0 0 0 4px #27ae60;
+}
+.timeline-item.thiazolidinedione::before {
+    box-shadow: 0 0 0 4px #9b59b6;
+}
+.timeline-item.glp1-agonist::before {
+    box-shadow: 0 0 0 4px #1abc9c;
+}
+.timeline-item.dpp4-inhibitor::before {
+    box-shadow: 0 0 0 4px #95a5a6;
+}
+.timeline-item.sglt2-inhibitor::before {
+    box-shadow: 0 0 0 4px #e67e22;
+}
+.timeline-item.glp1-long::before {
+    box-shadow: 0 0 0 4px #16a085;
+}
 
 /* Antidepressant hover colors */
 .timeline-item.maoi:hover {
@@ -712,6 +743,38 @@ h1 {
 }
 
 .timeline-item.cariprazine-bipolar:hover {
+    border-color: #16a085;
+}
+
+/* Diabetes hover border colors */
+.timeline-item.insulin-animal:hover {
+    border-color: #e74c3c;
+}
+.timeline-item.insulin-nph:hover {
+    border-color: #c0392b;
+}
+.timeline-item.biguanide:hover {
+    border-color: #3498db;
+}
+.timeline-item.sulfonylurea:hover {
+    border-color: #f39c12;
+}
+.timeline-item.alpha-glucosidase:hover {
+    border-color: #27ae60;
+}
+.timeline-item.thiazolidinedione:hover {
+    border-color: #9b59b6;
+}
+.timeline-item.glp1-agonist:hover {
+    border-color: #1abc9c;
+}
+.timeline-item.dpp4-inhibitor:hover {
+    border-color: #95a5a6;
+}
+.timeline-item.sglt2-inhibitor:hover {
+    border-color: #e67e22;
+}
+.timeline-item.glp1-long:hover {
     border-color: #16a085;
 }
 
@@ -976,6 +1039,38 @@ h1 {
 }
 
 .timeline-item.cariprazine-bipolar .icon-wrapper {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+/* Diabetes icon wrapper gradients */
+.timeline-item.insulin-animal .icon-wrapper {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+.timeline-item.insulin-nph .icon-wrapper {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+}
+.timeline-item.biguanide .icon-wrapper {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+.timeline-item.sulfonylurea .icon-wrapper {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+.timeline-item.alpha-glucosidase .icon-wrapper {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+.timeline-item.thiazolidinedione .icon-wrapper {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+.timeline-item.glp1-agonist .icon-wrapper {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+.timeline-item.dpp4-inhibitor .icon-wrapper {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+.timeline-item.sglt2-inhibitor .icon-wrapper {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+.timeline-item.glp1-long .icon-wrapper {
     background: linear-gradient(135deg, #16a085, #138d75);
 }
 
@@ -1277,6 +1372,48 @@ h1 {
     color: #0b5345;
 }
 
+/* Diabetes drug type badges */
+.timeline-item.insulin-animal .drug-type {
+    background: #ffebee;
+    color: #b71c1c;
+}
+.timeline-item.insulin-nph .drug-type {
+    background: #ffcdd2;
+    color: #c62828;
+}
+.timeline-item.biguanide .drug-type {
+    background: #e3f2fd;
+    color: #01579b;
+}
+.timeline-item.sulfonylurea .drug-type {
+    background: #fff3e0;
+    color: #e65100;
+}
+.timeline-item.alpha-glucosidase .drug-type {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+.timeline-item.thiazolidinedione .drug-type {
+    background: #f3e5f5;
+    color: #4a148c;
+}
+.timeline-item.glp1-agonist .drug-type {
+    background: #e0f2f1;
+    color: #004d40;
+}
+.timeline-item.dpp4-inhibitor .drug-type {
+    background: #eceff1;
+    color: #37474f;
+}
+.timeline-item.sglt2-inhibitor .drug-type {
+    background: #fff3e0;
+    color: #bf360c;
+}
+.timeline-item.glp1-long .drug-type {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
 .year {
     display: inline-block;
     font-size: 13px;
@@ -1515,6 +1652,38 @@ h1 {
 }
 
 .timeline-item.cariprazine-bipolar .year {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+/* Diabetes year badges */
+.timeline-item.insulin-animal .year {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+.timeline-item.insulin-nph .year {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+}
+.timeline-item.biguanide .year {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+.timeline-item.sulfonylurea .year {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+.timeline-item.alpha-glucosidase .year {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+.timeline-item.thiazolidinedione .year {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+.timeline-item.glp1-agonist .year {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+.timeline-item.dpp4-inhibitor .year {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+.timeline-item.sglt2-inhibitor .year {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+.timeline-item.glp1-long .year {
     background: linear-gradient(135deg, #16a085, #138d75);
 }
 
@@ -1810,6 +1979,38 @@ h1 {
     color: #0b5345;
 }
 
+/* Diabetes detail labels */
+.timeline-item.insulin-animal .detail-label {
+    color: #b71c1c;
+}
+.timeline-item.insulin-nph .detail-label {
+    color: #c62828;
+}
+.timeline-item.biguanide .detail-label {
+    color: #01579b;
+}
+.timeline-item.sulfonylurea .detail-label {
+    color: #e65100;
+}
+.timeline-item.alpha-glucosidase .detail-label {
+    color: #1b5e20;
+}
+.timeline-item.thiazolidinedione .detail-label {
+    color: #4a148c;
+}
+.timeline-item.glp1-agonist .detail-label {
+    color: #004d40;
+}
+.timeline-item.dpp4-inhibitor .detail-label {
+    color: #37474f;
+}
+.timeline-item.sglt2-inhibitor .detail-label {
+    color: #bf360c;
+}
+.timeline-item.glp1-long .detail-label {
+    color: #00695c;
+}
+
 .detail-content {
     font-size: 13px;
     color: #2d3748;
@@ -2049,6 +2250,34 @@ h1 {
     border-color: #27ae60;
 }
 
+/* Diabetes legend item border colors */
+.legend-item.insulin-mechanism {
+    border-color: #e74c3c;
+}
+.legend-item.biguanide-mechanism {
+    border-color: #3498db;
+}
+.legend-item.sulfonylurea-mechanism {
+    border-color: #f39c12;
+}
+.legend-item.tzd-mechanism {
+    border-color: #9b59b6;
+}
+.legend-item.glp1-mechanism {
+    border-color: #1abc9c;
+}
+.legend-item.dpp4-mechanism {
+    border-color: #95a5a6;
+}
+.legend-item.sglt2-mechanism {
+    border-color: #e67e22;
+}
+.legend-item.agi-mechanism {
+    border-color: #27ae60;
+}
+
+
+
 .legend-item-content {
     flex: 1;
 }
@@ -2103,3 +2332,6 @@ h1 {
 .legend-item.expanded .legend-expand-icon {
     transform: rotate(180deg);
 }
+
+
+
