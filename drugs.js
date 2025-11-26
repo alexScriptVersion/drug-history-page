@@ -996,6 +996,270 @@ const drugClasses = {
     impact: "Cultural phenomenon; transformed obesity treatment. Showed diabetes drugs could have massive cardiometabolic benefits. Ozempic became household name. Oral version (Rybelsus) first oral GLP-1.",
     controversy: "Massive shortage due to off-label weight loss prescribing by celebrities and non-diabetics. Extremely expensive (~$1000/month). 'Ozempic face' from rapid weight loss. Rebound weight gain when stopped. Equity concerns about access."
   }
+],
+anticoagulants: [
+  {
+    id: 1,
+    name: "Heparin",
+    year: 1916,
+    type: "Natural Anticoagulant",
+    typeAbbreviation: "UFH",
+    classKey: "heparin",
+    icon: "💉",
+    description: "First injectable anticoagulant discovered in dog livers; activates antithrombin to prevent clot formation",
+    discoveredBy: "Jay McLean (discovered), William Howell (named and developed)",
+    impact: "Enabled cardiac surgery, dialysis, and acute clot treatment. Still essential in hospitals for immediate anticoagulation and during procedures.",
+    controversy: "Requires IV administration and monitoring; heparin-induced thrombocytopenia (HIT) paradoxically causes dangerous clots. Animal-derived product raised concerns."
+  },
+  {
+    id: 2,
+    name: "Warfarin (Coumadin)",
+    year: 1954,
+    type: "Vitamin K Antagonist",
+    typeAbbreviation: "VKA",
+    classKey: "warfarin",
+    icon: "🐀",
+    description: "Developed from moldy clover that killed cattle; marketed as rat poison before becoming medicine after saving President Eisenhower",
+    discoveredBy: "Karl Paul Link and team at University of Wisconsin",
+    impact: "Dominated anticoagulation for 60 years; prevented millions of strokes in atrial fibrillation. Most dramatic example of pesticide-to-medicine transformation.",
+    controversy: "Narrow therapeutic window requires constant blood monitoring; extensive food/drug interactions; 'rat poison' stigma persists despite saving millions of lives"
+  },
+  {
+    id: 3,
+    name: "Aspirin (for cardiovascular use)",
+    year: 1974,
+    type: "Antiplatelet Agent",
+    typeAbbreviation: "ASA",
+    classKey: "aspirin",
+    icon: "💊",
+    description: "Ancient pain reliever repurposed for cardiovascular protection; irreversibly blocks COX-1 enzyme preventing platelet aggregation",
+    discoveredBy: "Synthesized 1899 by Bayer; cardiovascular benefits proven in 1970s trials",
+    impact: "Revolutionized heart attack and stroke prevention; dirt cheap and accessible worldwide. One of medicine's most prescribed drugs globally.",
+    controversy: "Over-prescribed to low-risk patients who face bleeding risks without benefits; recent guidelines restricted routine use for primary prevention"
+  },
+  {
+    id: 4,
+    name: "Enoxaparin (Lovenox)",
+    year: 1993,
+    type: "Low Molecular Weight Heparin",
+    typeAbbreviation: "LMWH",
+    classKey: "lmwh",
+    icon: "🔬",
+    description: "Refined version of heparin with predictable dosing; can be self-injected at home unlike unfractionated heparin",
+    discoveredBy: "Developed by Sanofi from traditional heparin",
+    impact: "Enabled outpatient treatment of blood clots; pregnant women can safely anticoagulate; bridging therapy for surgery. More convenient than UFH.",
+    controversy: "Still requires injections (not oral); expensive compared to heparin; dose adjustments needed in kidney disease and obesity"
+  },
+  {
+    id: 5,
+    name: "Clopidogrel (Plavix)",
+    year: 1997,
+    type: "P2Y12 Platelet Inhibitor",
+    typeAbbreviation: "P2Y12",
+    classKey: "clopidogrel",
+    icon: "💳",
+    description: "Powerful antiplatelet blocking ADP receptors; became second-best-selling drug globally after stent procedures exploded",
+    discoveredBy: "Sanofi-Synthelabo and Bristol-Myers Squibb",
+    impact: "Standard therapy after coronary stents and heart attacks; dual antiplatelet therapy (aspirin + Plavix) prevented stent thrombosis. Over $7 billion annually at peak.",
+    controversy: "Expensive blockbuster ($200/month pre-generic); genetic variations (CYP2C19) make it ineffective in 25-30% of patients who can't metabolize prodrug"
+  },
+  {
+    id: 6,
+    name: "Fondaparinux (Arixtra)",
+    year: 2001,
+    type: "Synthetic Factor Xa Inhibitor",
+    typeAbbreviation: "FXa-I",
+    classKey: "fondaparinux",
+    icon: "⚗️",
+    description: "First synthetic selective Factor Xa inhibitor; bridge between heparins and DOACs showing specific factor targeting was possible",
+    discoveredBy: "GlaxoSmithKline (based on heparin's active pentasaccharide sequence)",
+    impact: "Proved concept of selective Factor Xa inhibition; safer alternative to heparin for HIT patients; paved way for oral Factor Xa inhibitors.",
+    controversy: "Injectable only (subcutaneous); no antidote; expensive; largely overshadowed by oral DOACs that emerged decade later"
+  },
+  {
+    id: 7,
+    name: "Dabigatran (Pradaxa)",
+    year: 2010,
+    type: "Direct Thrombin Inhibitor",
+    typeAbbreviation: "DTI",
+    classKey: "dabigatran",
+    icon: "🔑",
+    description: "First oral direct thrombin inhibitor; first DOAC approved, beginning the revolution away from warfarin",
+    discoveredBy: "Boehringer Ingelheim",
+    impact: "Shattered belief that oral anticoagulation required warfarin-like mechanisms; no monitoring needed. Opened floodgates for DOAC development.",
+    controversy: "Initially no reversal agent (approved 2015); twice-daily dosing less convenient; early bleeding concerns; expensive ($400-500/month); dyspepsia side effect common"
+  },
+  {
+    id: 8,
+    name: "Rivaroxaban (Xarelto)",
+    year: 2011,
+    type: "Direct Factor Xa Inhibitor",
+    typeAbbreviation: "FXa",
+    classKey: "rivaroxaban",
+    icon: "⚡",
+    description: "First oral Factor Xa inhibitor; once-daily dosing revolutionized convenience compared to warfarin's complexity",
+    discoveredBy: "Bayer and Janssen Pharmaceuticals",
+    impact: "Became one of top-selling drugs globally; massive atrial fibrillation and DVT/PE trials proved non-inferiority to warfarin with better safety profile.",
+    controversy: "Major bleeding events highly publicized despite being less than warfarin; thousands of lawsuits over bleeding deaths; reversal agent delay"
+  },
+  {
+    id: 9,
+    name: "Apixaban (Eliquis)",
+    year: 2012,
+    type: "Direct Factor Xa Inhibitor",
+    typeAbbreviation: "FXa",
+    classKey: "apixaban",
+    icon: "🌟",
+    description: "Most prescribed DOAC; twice-daily Factor Xa inhibitor with best balance of efficacy and safety in trials",
+    discoveredBy: "Bristol-Myers Squibb and Pfizer",
+    impact: "ARISTOTLE trial showed superiority to warfarin for stroke prevention AND lower bleeding; became gold-standard DOAC. Surpassed Xarelto in prescriptions.",
+    controversy: "Twice-daily dosing (vs. once-daily rivaroxaban); extremely expensive ($500+/month); insurance often requires warfarin failure first; missed doses = immediate loss of protection"
+  },
+  {
+    id: 10,
+    name: "Andexanet alfa (Andexxa)",
+    year: 2018,
+    type: "DOAC Reversal Agent",
+    typeAbbreviation: "REV",
+    classKey: "reversal-agent",
+    icon: "🚑",
+    description: "First reversal agent for Factor Xa inhibitors; recombinant modified Factor Xa that binds anticoagulants, neutralizing them during life-threatening bleeds",
+    discoveredBy: "Portola Pharmaceuticals (now Alexion)",
+    impact: "Solved critical safety concern about DOACs—'what if patient has major bleed?' Now emergency medicine can reverse Eliquis/Xarelto bleeding rapidly.",
+    controversy: "Phenomenally expensive ($25,000-50,000 per dose); limited evidence for improved outcomes; thrombosis risk after reversal; availability issues at smaller hospitals"
+  }
+],
+antivirals: [
+  {
+    id: 1,
+    name: "Acyclovir (Zovirax)",
+    year: 1982,
+    type: "Nucleoside Analog",
+    typeAbbreviation: "NA",
+    classKey: "acyclovir",
+    icon: "🔬",
+    description: "First truly effective antiviral drug; selectively activated by viral enzymes, proving antivirals were possible",
+    discoveredBy: "Gertrude Elion and team at Burroughs Wellcome (Nobel Prize 1988)",
+    impact: "Shattered belief that viruses were untreatable; transformed herpes from painful recurring condition to manageable disease. Pioneered rational drug design based on viral enzyme selectivity.",
+    controversy: "Only suppresses herpes, doesn't cure it; virus remains dormant in nerve cells forever. Resistance can develop with overuse."
+  },
+  {
+    id: 2,
+    name: "Zidovudine/AZT (Retrovir)",
+    year: 1987,
+    type: "Nucleoside Reverse Transcriptase Inhibitor",
+    typeAbbreviation: "NRTI",
+    classKey: "azt",
+    icon: "💊",
+    description: "First HIV drug, originally failed cancer drug from 1964; fastest FDA approval in history amid AIDS crisis desperation",
+    discoveredBy: "Jerome Horwitz (1964), repurposed for HIV by Burroughs Wellcome",
+    impact: "Proved HIV could be fought with drugs; gave hope during darkest AIDS crisis years. Set template for retroviral drug development.",
+    controversy: "Brutal side effects (anemia, nausea); HIV rapidly developed resistance; extremely expensive ($10,000/year 1987). Monotherapy inadequate—patients still died, just slower."
+  },
+  {
+    id: 3,
+    name: "Saquinavir (Invirase)",
+    year: 1995,
+    type: "HIV Protease Inhibitor",
+    typeAbbreviation: "PI",
+    classKey: "protease-inhibitor",
+    icon: "🔑",
+    description: "First HIV protease inhibitor; blocks enzyme that cuts viral proteins, preventing HIV maturation into infectious particles",
+    discoveredBy: "Hoffmann-La Roche",
+    impact: "Enabled HAART (Highly Active Antiretroviral Therapy) by targeting different enzyme than NRTIs. When combined with NRTIs in 1996, created the 'Lazarus effect'—dying AIDS patients rose from deathbeds.",
+    controversy: "Required refrigeration initially; poor absorption; needed ritonavir boost. Early pills were huge and required strict meal timing. Resistance developed if not combined with other drugs."
+  },
+  {
+    id: 4,
+    name: "HAART Combination Therapy",
+    year: 1996,
+    type: "Multi-drug Combination",
+    typeAbbreviation: "HAART",
+    classKey: "haart",
+    icon: "💫",
+    description: "Revolutionary triple-drug regimen (2 NRTIs + 1 PI); prevents resistance by attacking HIV at multiple points simultaneously",
+    discoveredBy: "Concept proven by multiple research groups; announced at 1996 Vancouver AIDS Conference",
+    impact: "Transformed HIV from 100% fatal to manageable chronic disease IN ONE YEAR. The 'Lazarus effect'—patients on deathbeds returned to health. AIDS deaths plummeted 47% in 1996-1997. One of medicine's greatest triumphs.",
+    controversy: "Required taking 20+ pills daily on strict schedules initially; severe side effects; lifelong commitment; didn't cure HIV, just suppressed it. Access inequality—millions in developing world couldn't afford it."
+  },
+  {
+    id: 5,
+    name: "Oseltamivir (Tamiflu)",
+    year: 1999,
+    type: "Neuraminidase Inhibitor",
+    typeAbbreviation: "NAI",
+    classKey: "neuraminidase",
+    icon: "🦠",
+    description: "Blocks influenza neuraminidase enzyme, trapping virus inside infected cells; became pandemic preparedness stockpile drug",
+    discoveredBy: "Gilead Sciences (designed), licensed to Roche",
+    impact: "First oral flu treatment; governments stockpiled billions of dollars worth for pandemic preparedness. Widely prescribed during 2009 H1N1 'swine flu' pandemic.",
+    controversy: "Modest benefits—reduces flu duration by ~1 day if started within 48 hours. Effectiveness debated; some studies suggest overhyped. Stockpiling costs versus actual benefit questioned. Resistance emerging."
+  },
+  {
+    id: 6,
+    name: "Tenofovir/Emtricitabine (Truvada)",
+    year: 2004,
+    type: "Fixed-dose NRTI Combination",
+    typeAbbreviation: "NRTI",
+    classKey: "truvada",
+    icon: "🛡️",
+    description: "Two NRTIs in one pill; later approved for PrEP (pre-exposure prophylaxis) allowing HIV-negative people to prevent infection",
+    discoveredBy: "Gilead Sciences",
+    impact: "Simplified HIV treatment to fewer pills. **REVOLUTIONARY for PrEP (2012 approval)**: 99% reduction in HIV transmission risk for HIV-negative people taking daily pill. Enabled 'undetectable = untransmittable' (U=U) era.",
+    controversy: "PrEP approval sparked moral panic about 'encouraging risky behavior.' Insurance coverage battles. Gilead's patent extension tactics criticized. Kidney and bone density side effects in some patients."
+  },
+  {
+    id: 7,
+    name: "Sofosbuvir (Sovaldi)",
+    year: 2013,
+    type: "NS5B Polymerase Inhibitor",
+    typeAbbreviation: "DAA",
+    classKey: "sofosbuvir",
+    icon: "🎯",
+    description: "Hepatitis C direct-acting antiviral; first drug that could CURE chronic HCV in 12 weeks with 95%+ success rate",
+    discoveredBy: "Michael Sofia at Pharmasset (acquired by Gilead for $11 billion)",
+    impact: "Made Hepatitis C the FIRST chronic viral infection curable with pills alone. 95%+ cure rate in 8-12 weeks, oral only, minimal side effects. Eliminated need for brutal interferon injections.",
+    controversy: "INFAMOUS for pricing: $84,000 for 12-week treatment ($1,000/pill). Sparked national outrage over drug costs. Insurance companies refused coverage. Generic versions in India cost $300. Poster child for pharmaceutical greed despite miracle cure."
+  },
+  {
+    id: 8,
+    name: "Biktarvy",
+    year: 2018,
+    type: "Single-Tablet Regimen",
+    typeAbbreviation: "STR",
+    classKey: "biktarvy",
+    icon: "💊",
+    description: "Three drugs in one small pill once daily (bictegravir + TAF + emtricitabine); represents modern HIV treatment convenience",
+    discoveredBy: "Gilead Sciences",
+    impact: "Exemplifies how far HIV treatment has come: ONE small pill, ONCE daily, minimal side effects, normal lifespan. High barrier to resistance. Allows people with HIV to live completely normal lives.",
+    controversy: "Extremely expensive ($3,000+/month in US); Gilead criticized for high pricing on lifesaving medications while benefiting from NIH-funded research. Patent disputes over TAF formulation."
+  },
+  {
+    id: 9,
+    name: "COVID-19 mRNA Vaccines (Pfizer/Moderna)",
+    year: 2020,
+    type: "mRNA Vaccine Platform",
+    typeAbbreviation: "mRNA",
+    classKey: "mrna-vaccine",
+    icon: "💉",
+    description: "First approved mRNA vaccines; designed in 48 hours, 95% effective, approved in 11 months—fastest vaccine development in history",
+    discoveredBy: "Katalin Karikó, Drew Weissman (mRNA tech); BioNTech/Pfizer, Moderna (vaccines)",
+    impact: "Ended COVID lockdowns, saved millions of lives. Shattered vaccine development timeline records (previous: 4 years for mumps). Proved mRNA platform for future pandemics. Nobel Prize 2023 for Karikó and Weissman.",
+    controversy: "Politicized beyond belief; misinformation explosion; mandates sparked backlash; rare myocarditis in young males; ongoing debates about boosters, efficacy duration, variant escape. Equity issues—wealthy nations hoarded doses."
+  },
+  {
+    id: 10,
+    name: "Nirmatrelvir/ritonavir (Paxlovid)",
+    year: 2021,
+    type: "Protease Inhibitor Combination",
+    typeAbbreviation: "PI",
+    classKey: "paxlovid",
+    icon: "🏠",
+    description: "First effective oral COVID-19 treatment; 89% reduction in hospitalization/death if started within 5 days of symptoms",
+    discoveredBy: "Pfizer",
+    impact: "Provided at-home COVID treatment option, reducing burden on hospitals. Especially important for high-risk patients. Represents rapid antiviral development leveraging existing protease inhibitor knowledge.",
+    controversy: "'Paxlovid rebound'—symptoms return after treatment in some patients. Must start very early. Many drug interactions due to ritonavir booster. Horrible metallic taste. Underutilized despite availability."
+  }
 ]
 };
 
@@ -1035,7 +1299,15 @@ const journeyTexts = {
   diabetes: {
   title: "The Journey",
   text: "Diabetes treatment began with one of medicine's most dramatic moments: children dying in hospital wards awakening within hours of receiving the first insulin injections in 1922. From animal pancreas extracts to pills that make kidneys excrete sugar, diabetes medications trace humanity's evolving understanding of metabolism. Each breakthrough—from oral medications in the 1950s to weight-loss wonder drugs in the 2020s—has redefined what's possible, though the holy grail of a cure remains elusive."
-}
+  },
+  anticoagulants: {
+    title: "The Journey",
+    text: "The anticoagulant story begins with mysterious cattle deaths from spoiled clover in the 1920s, leading to the discovery of warfarin—first marketed as rat poison before saving President Eisenhower's life and becoming medicine. For 60 years, patients endured warfarin's constant blood tests, food restrictions, and 'rat poison' stigma. Then, in 2010-2012, direct oral anticoagulants (DOACs) finally delivered the holy grail: safe, convenient pills requiring no monitoring. From bleeding cows to billion-dollar blockbusters, anticoagulants trace medicine's path from serendipitous disasters to designed molecular precision."
+  },
+  antivirals: {
+    title: "The Journey",
+    text: "For most of history, viral infections were untreatable death sentences—viruses hijack our own cells, making them nearly impossible to fight without destroying the host. Acyclovir (1982) proved antivirals were possible. The AIDS crisis forced unprecedented urgency: AZT offered hope but couldn't stop HIV alone. Then in 1996, combination therapy created the 'Lazarus effect'—the dying rose from their beds as HIV became manageable. Direct-acting antivirals cured Hepatitis C (2013). COVID mRNA vaccines (2020) were designed in 48 hours and approved in 11 months, shattering all records. From impossible dream to miracle cures, antivirals represent medicine's triumph over its most elusive enemy."
+  }
 };
 
 // ============================================
@@ -1441,6 +1713,118 @@ const legendData = {
       mechanism: "Inhibit intestinal enzymes (alpha-glucosidase) that break down complex carbohydrates into absorbable simple sugars. Slows carbohydrate digestion and absorption, blunting post-meal glucose spikes. Must be taken with meals. Undigested carbs reach colon causing gas and diarrhea."
     }
   ]
+},
+anticoagulants: {
+  title: "Mechanism Classes",
+  icon: "🩸",
+  description: "Blood clots form through complex cascades involving platelets and clotting factors. Anticoagulants and antiplatelets target different steps in this process—some block platelet aggregation, others inhibit specific clotting factors, creating a diverse pharmacological toolkit.",
+  items: [
+    {
+      name: "Heparins",
+      fullName: "Indirect Thrombin/Factor Xa Inhibitors",
+      color: "linear-gradient(135deg, #3498db, #2980b9)",
+      classKey: "heparin-mechanism",
+      mechanism: "Bind to antithrombin III (a natural anticoagulant), dramatically accelerating its ability to inactivate thrombin (Factor IIa) and Factor Xa by 1000-fold. Work indirectly by enhancing the body's own clotting inhibitor. Unfractionated heparin (UFH) and low molecular weight heparins (LMWH) differ in size and specificity."
+    },
+    {
+      name: "Vitamin K Antagonists",
+      fullName: "Vitamin K Epoxide Reductase Inhibitors",
+      color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+      classKey: "vka-mechanism",
+      mechanism: "Block vitamin K epoxide reductase (VKORC1), preventing regeneration of active vitamin K. This depletes vitamin K, which is essential for producing functional clotting factors II, VII, IX, and X in the liver. Takes days to work because existing clotting factors must be cleared first. Warfarin is the prototype."
+    },
+    {
+      name: "Antiplatelet Agents",
+      fullName: "Platelet Aggregation Inhibitors",
+      color: "linear-gradient(135deg, #f39c12, #e67e22)",
+      classKey: "antiplatelet-mechanism",
+      mechanism: "Prevent platelets from clumping together to form arterial clots. Multiple mechanisms: aspirin irreversibly blocks COX-1 (stopping thromboxane A2 production), P2Y12 inhibitors (clopidogrel, ticagrelor) block ADP receptors. Primarily prevent arterial thrombosis (heart attacks, strokes) rather than venous clots."
+    },
+    {
+      name: "Direct Thrombin Inhibitors",
+      fullName: "Factor IIa (Thrombin) Direct Inhibitors",
+      color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+      classKey: "dti-mechanism",
+      mechanism: "Directly bind to and inhibit thrombin (Factor IIa), the final enzyme that converts fibrinogen to fibrin (the mesh of blood clots). Unlike heparins, work directly without needing antithrombin as a cofactor. Dabigatran (oral) is the main example; also IV agents like bivalirudin."
+    },
+    {
+      name: "Direct Factor Xa Inhibitors",
+      fullName: "Factor Xa Direct Inhibitors (DOACs)",
+      color: "linear-gradient(135deg, #1abc9c, #16a085)",
+      classKey: "fxa-mechanism",
+      mechanism: "Directly bind to and inhibit Factor Xa, blocking the conversion of prothrombin to thrombin. Stop the clotting cascade one step earlier than thrombin inhibitors. Include rivaroxaban, apixaban, edoxaban. Advantages: oral, predictable dosing, no monitoring, fewer interactions than warfarin. The modern standard."
+    },
+    {
+      name: "Reversal Agents",
+      fullName: "Anticoagulant Antidotes",
+      color: "linear-gradient(135deg, #e67e22, #d35400)",
+      classKey: "reversal-mechanism",
+      mechanism: "Rapidly neutralize anticoagulants during life-threatening bleeding or emergency surgery. Vitamin K reverses warfarin (slowly, over 12-24 hours). Protamine reverses heparin. Idarucizumab reverses dabigatran. Andexanet alfa reverses Factor Xa inhibitors by acting as a decoy binding site. Critical safety net for anticoagulation."
+    },
+    {
+      name: "Arterial vs Venous Clots",
+      fullName: "Why Different Drugs for Different Clots",
+      color: "linear-gradient(135deg, #95a5a6, #7f8c8d)",
+      classKey: "clot-types",
+      mechanism: "Arterial clots (heart attacks, ischemic strokes) form in high-flow areas from ruptured atherosclerotic plaques—dominated by PLATELETS. Treated with antiplatelets (aspirin, clopidogrel). Venous clots (DVT, PE) form in low-flow areas from stasis and hypercoagulability—dominated by FIBRIN. Treated with anticoagulants (warfarin, DOACs). This explains why different drugs are used for different conditions!"
+    }
+  ]
+},
+antivirals: {
+  title: "Mechanism Classes",
+  icon: "🦠",
+  description: "Viruses hijack cellular machinery to replicate, making them nearly impossible to target without harming the host. Antivirals exploit subtle differences in viral enzymes or block specific steps in the viral life cycle. Different virus families require completely different drugs.",
+  items: [
+    {
+      name: "Nucleoside/Nucleotide Analogs",
+      fullName: "DNA/RNA Synthesis Inhibitors",
+      color: "linear-gradient(135deg, #3498db, #2980b9)",
+      classKey: "nucleoside-analog",
+      mechanism: "Mimic natural DNA/RNA building blocks but are 'defective'—when incorporated into viral genetic material, they terminate synthesis. Acyclovir (herpes), AZT and tenofovir (HIV), sofosbuvir (HCV) all work this way. Selectively activated by viral enzymes or viral polymerases, sparing most host cells."
+    },
+    {
+      name: "Protease Inhibitors",
+      fullName: "Viral Protease Enzyme Blockers",
+      color: "linear-gradient(135deg, #9b59b6, #8e44ad)",
+      classKey: "protease-mechanism",
+      mechanism: "Block viral proteases—enzymes that cut long viral protein chains into functional pieces. Without protease, viruses produce immature, non-infectious particles. HIV protease inhibitors (saquinavir, ritonavir) revolutionized AIDS treatment. COVID protease inhibitors (Paxlovid) use same principle. Highly specific to viral enzymes."
+    },
+    {
+      name: "Neuraminidase Inhibitors",
+      fullName: "Viral Release Blockers",
+      color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+      classKey: "neuraminidase-mechanism",
+      mechanism: "Specific to influenza virus. Block neuraminidase enzyme that cleaves sialic acid, which is needed for new viral particles to escape infected cells. Traps viruses inside cells, preventing spread to new cells. Oseltamivir (Tamiflu) and zanamivir work this way. Must be started within 48 hours of symptoms."
+    },
+    {
+      name: "Polymerase Inhibitors",
+      fullName: "Viral RNA/DNA Polymerase Blockers",
+      color: "linear-gradient(135deg, #1abc9c, #16a085)",
+      classKey: "polymerase-mechanism",
+      mechanism: "Directly inhibit viral polymerases—enzymes that copy viral genetic material. Different from nucleoside analogs (which are incorporated as defective building blocks). Sofosbuvir blocks HCV NS5B polymerase. Non-nucleoside reverse transcriptase inhibitors (NNRTIs) like efavirenz block HIV reverse transcriptase differently than NRTIs."
+    },
+    {
+      name: "Combination Therapy",
+      fullName: "Multi-Drug Synergistic Approach",
+      color: "linear-gradient(135deg, #f39c12, #e67e22)",
+      classKey: "combination-mechanism",
+      mechanism: "Using multiple antivirals simultaneously prevents resistance—virus must mutate to escape ALL drugs at once (nearly impossible). HAART for HIV combines 2-3 drugs attacking different viral enzymes. Modern single-tablet regimens contain 3 drugs. This principle transformed HIV from fatal to manageable and is used for HCV treatment."
+    },
+    {
+      name: "mRNA Vaccines",
+      fullName: "Synthetic mRNA Protein Instruction Platform",
+      color: "linear-gradient(135deg, #e67e22, #d35400)",
+      classKey: "mrna-mechanism",
+      mechanism: "Not a traditional antiviral—teaches immune system to recognize virus BEFORE infection. Synthetic mRNA instructs cells to make viral spike protein, triggering immune response without actual virus. Lipid nanoparticles deliver mRNA into cells. Extremely fast to design (COVID vaccines designed in 48 hours). Platform can be rapidly adapted for new variants or viruses."
+    },
+    {
+      name: "Why Viruses Are Hard to Treat",
+      fullName: "The Antiviral Challenge",
+      color: "linear-gradient(135deg, #95a5a6, #7f8c8d)",
+      classKey: "viral-challenge",
+      mechanism: "Viruses use HOST cell machinery to replicate—they're not alive independently. Must target viral-specific enzymes without harming host. Viruses mutate rapidly (especially RNA viruses like HIV, HCV, influenza, COVID). Each virus family needs different drugs—herpes drugs don't work for HIV, flu drugs don't work for COVID. This is why antivirals took decades to develop and why we still don't have broad-spectrum antivirals."
+    }
+  ]
 }
 };
 
@@ -1511,6 +1895,22 @@ const conditionInfo = {
   description: "Diabetes is a metabolic disorder where the body cannot properly regulate blood glucose levels. Type 1 diabetes (5-10% of cases) is an autoimmune destruction of insulin-producing pancreatic beta cells, requiring lifelong insulin. Type 2 diabetes (90-95%) involves insulin resistance where cells don't respond properly to insulin, plus progressive beta cell dysfunction.",
   pathophysiology: "In type 1, autoimmune destruction eliminates insulin production entirely—no insulin means glucose cannot enter cells and accumulates in blood to dangerous levels. Type 2 is more complex: peripheral tissues (muscle, fat, liver) become resistant to insulin's signals (insulin resistance), forcing the pancreas to produce more insulin (hyperinsulinemia). Eventually beta cells become exhausted and fail, requiring exogenous insulin. Chronic hyperglycemia causes micro- and macrovascular damage through multiple mechanisms: glycation of proteins (forming AGEs), oxidative stress, inflammation, and metabolic dysfunction affecting every organ system.",
   prevalence: "Diabetes affects 537 million adults worldwide (10.5% of population), projected to reach 783 million by 2045. In the US: 37 million people (11.3%). Type 2 accounts for 90-95% of cases. Leading cause of blindness, kidney failure, and lower limb amputations. Diabetes prevalence has quadrupled since 1980, driven by obesity and aging populations. 96 million US adults have prediabetes."
+  },
+
+  anticoagulants: {
+    name: "Thrombosis & Thromboembolic Disorders",
+    icon: "🩸",
+    description: "Thrombosis is pathological blood clot formation inside blood vessels, blocking blood flow and causing tissue damage. When clots break off and travel (embolize), they can lodge in critical organs causing strokes, pulmonary embolism, or heart attacks. Blood clots are the body's normal healing response gone wrong—protective clotting becomes life-threatening obstruction.",
+    pathophysiology: "Clot formation follows Virchow's Triad: (1) endothelial injury (vessel damage), (2) abnormal blood flow (stasis or turbulence), and (3) hypercoagulability (blood too prone to clotting). ARTERIAL clots form in high-pressure, high-flow areas (arteries) from ruptured atherosclerotic plaques, are platelet-rich 'white clots,' and cause heart attacks and ischemic strokes. VENOUS clots form in low-pressure, low-flow areas (veins) from stasis and hypercoagulability, are fibrin-rich 'red clots,' and cause deep vein thrombosis (DVT) and pulmonary embolism (PE). The coagulation cascade involves 13+ factors in a complex amplification system converting fibrinogen to fibrin mesh. Atrial fibrillation causes blood to pool in heart chambers, forming clots that embolize to brain (stroke). Mechanical heart valves create turbulent flow requiring lifelong anticoagulation.",
+    prevalence: "Venous thromboembolism (DVT/PE) affects 300,000-600,000 Americans annually, killing 100,000-300,000. Atrial fibrillation affects 6+ million Americans, causing 130,000+ strokes/year; risk increases with age (9% of people over 65). Coronary artery disease (heart attacks) kills 370,000+ Americans annually. Stroke kills 150,000+ annually. Post-surgical thrombosis remains a leading preventable cause of hospital death. Anticoagulants and antiplatelets prevent millions of clot-related deaths yearly but cause ~50,000 major bleeding events annually—constant balancing act."
+  },
+
+  antivirals: {
+  name: "Viral Infections",
+  icon: "🦠",
+  description: "Viruses are not technically alive—they're genetic material (DNA or RNA) wrapped in protein that hijacks living cells to reproduce. Unlike bacteria, viruses use the host cell's own machinery, making them extraordinarily difficult to target without harming the host. Viral infections range from nuisance (common cold) to acute deadly (Ebola) to chronic destructive (HIV, Hepatitis C).",
+  pathophysiology: "Viral replication cycle: (1) Attachment—virus binds to specific cell surface receptors, (2) Entry—viral genetic material enters cell, (3) Uncoating—viral genome released, (4) Replication—viral polymerases copy genetic material using host cell's resources, (5) Assembly—new viral proteins and genomes combine, (6) Release—new viruses exit to infect more cells. Different antivirals target different steps. RNA viruses (HIV, HCV, influenza, COVID) mutate rapidly due to error-prone polymerases, enabling drug resistance and immune escape. DNA viruses (herpes, smallpox) are more stable. Retroviruses (HIV) reverse-transcribe RNA into DNA that integrates into host genome—nearly impossible to eliminate. Chronic viral infections (HIV, HCV, herpes) establish persistent or latent infections, requiring long-term or lifelong treatment.",
+  prevalence: "HIV: 39 million people living with HIV globally; 630,000 AIDS deaths annually (down from 2+ million at peak). Hepatitis C: 58 million chronic infections worldwide; leading cause of liver transplants before DAAs. Influenza: 3-5 million severe cases annually, 290,000-650,000 deaths. COVID-19: 775+ million confirmed cases, 7+ million deaths (2020-2024); actual numbers likely much higher. Herpes simplex: 67% of global population under 50 has HSV-1 (oral herpes); 13% have HSV-2 (genital herpes). Despite antiviral advances, viral infections remain leading causes of death worldwide, especially in resource-limited settings."
 }
 };
 

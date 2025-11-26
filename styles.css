@@ -2335,3 +2335,581 @@ h1 {
 
 
 
+/* ============================================
+   ANTICOAGULANT COLORS
+   ============================================ */
+
+/* Timeline dots */
+.timeline-item.heparin::before {
+    box-shadow: 0 0 0 4px #3498db;
+}
+
+.timeline-item.warfarin::before {
+    box-shadow: 0 0 0 4px #e74c3c;
+}
+
+.timeline-item.aspirin::before {
+    box-shadow: 0 0 0 4px #f39c12;
+}
+
+.timeline-item.lmwh::before {
+    box-shadow: 0 0 0 4px #2980b9;
+}
+
+.timeline-item.clopidogrel::before {
+    box-shadow: 0 0 0 4px #e67e22;
+}
+
+.timeline-item.fondaparinux::before {
+    box-shadow: 0 0 0 4px #95a5a6;
+}
+
+.timeline-item.dabigatran::before {
+    box-shadow: 0 0 0 4px #9b59b6;
+}
+
+.timeline-item.rivaroxaban::before {
+    box-shadow: 0 0 0 4px #1abc9c;
+}
+
+.timeline-item.apixaban::before {
+    box-shadow: 0 0 0 4px #16a085;
+}
+
+.timeline-item.reversal-agent::before {
+    box-shadow: 0 0 0 4px #c0392b;
+}
+
+/* Hover border colors */
+.timeline-item.heparin:hover {
+    border-color: #3498db;
+}
+
+.timeline-item.warfarin:hover {
+    border-color: #e74c3c;
+}
+
+.timeline-item.aspirin:hover {
+    border-color: #f39c12;
+}
+
+.timeline-item.lmwh:hover {
+    border-color: #2980b9;
+}
+
+.timeline-item.clopidogrel:hover {
+    border-color: #e67e22;
+}
+
+.timeline-item.fondaparinux:hover {
+    border-color: #95a5a6;
+}
+
+.timeline-item.dabigatran:hover {
+    border-color: #9b59b6;
+}
+
+.timeline-item.rivaroxaban:hover {
+    border-color: #1abc9c;
+}
+
+.timeline-item.apixaban:hover {
+    border-color: #16a085;
+}
+
+.timeline-item.reversal-agent:hover {
+    border-color: #c0392b;
+}
+
+/* Icon wrapper gradients */
+.timeline-item.heparin .icon-wrapper {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.timeline-item.warfarin .icon-wrapper {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timeline-item.aspirin .icon-wrapper {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.timeline-item.lmwh .icon-wrapper {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+.timeline-item.clopidogrel .icon-wrapper {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.timeline-item.fondaparinux .icon-wrapper {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.timeline-item.dabigatran .icon-wrapper {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.timeline-item.rivaroxaban .icon-wrapper {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.timeline-item.apixaban .icon-wrapper {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.timeline-item.reversal-agent .icon-wrapper {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+/* Drug type badges */
+.timeline-item.heparin .drug-type {
+    background: #e3f2fd;
+    color: #01579b;
+}
+
+.timeline-item.warfarin .drug-type {
+    background: #ffebee;
+    color: #b71c1c;
+}
+
+.timeline-item.aspirin .drug-type {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.timeline-item.lmwh .drug-type {
+    background: #e1f5fe;
+    color: #0277bd;
+}
+
+.timeline-item.clopidogrel .drug-type {
+    background: #fbe9e7;
+    color: #bf360c;
+}
+
+.timeline-item.fondaparinux .drug-type {
+    background: #eceff1;
+    color: #37474f;
+}
+
+.timeline-item.dabigatran .drug-type {
+    background: #f3e5f5;
+    color: #4a148c;
+}
+
+.timeline-item.rivaroxaban .drug-type {
+    background: #e0f2f1;
+    color: #004d40;
+}
+
+.timeline-item.apixaban .drug-type {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.timeline-item.reversal-agent .drug-type {
+    background: #ffcdd2;
+    color: #c62828;
+}
+
+/* Year badges */
+.timeline-item.heparin .year {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.timeline-item.warfarin .year {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timeline-item.aspirin .year {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.timeline-item.lmwh .year {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+.timeline-item.clopidogrel .year {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.timeline-item.fondaparinux .year {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.timeline-item.dabigatran .year {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.timeline-item.rivaroxaban .year {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.timeline-item.apixaban .year {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.timeline-item.reversal-agent .year {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+}
+
+/* Detail labels */
+.timeline-item.heparin .detail-label {
+    color: #01579b;
+}
+
+.timeline-item.warfarin .detail-label {
+    color: #b71c1c;
+}
+
+.timeline-item.aspirin .detail-label {
+    color: #e65100;
+}
+
+.timeline-item.lmwh .detail-label {
+    color: #0277bd;
+}
+
+.timeline-item.clopidogrel .detail-label {
+    color: #bf360c;
+}
+
+.timeline-item.fondaparinux .detail-label {
+    color: #37474f;
+}
+
+.timeline-item.dabigatran .detail-label {
+    color: #4a148c;
+}
+
+.timeline-item.rivaroxaban .detail-label {
+    color: #004d40;
+}
+
+.timeline-item.apixaban .detail-label {
+    color: #00695c;
+}
+
+.timeline-item.reversal-agent .detail-label {
+    color: #c62828;
+}
+
+/* Legend item border colors */
+.legend-item.heparin-mechanism {
+    border-color: #3498db;
+}
+
+.legend-item.vka-mechanism {
+    border-color: #e74c3c;
+}
+
+.legend-item.antiplatelet-mechanism {
+    border-color: #f39c12;
+}
+
+.legend-item.dti-mechanism {
+    border-color: #9b59b6;
+}
+
+.legend-item.fxa-mechanism {
+    border-color: #1abc9c;
+}
+
+.legend-item.reversal-mechanism {
+    border-color: #e67e22;
+}
+
+.legend-item.clot-types {
+    border-color: #95a5a6;
+}
+
+
+/* ============================================
+   ANTIVIRAL COLORS
+   ============================================ */
+
+/* Timeline dots */
+.timeline-item.acyclovir::before {
+    box-shadow: 0 0 0 4px #3498db;
+}
+
+.timeline-item.azt::before {
+    box-shadow: 0 0 0 4px #e74c3c;
+}
+
+.timeline-item.protease-inhibitor::before {
+    box-shadow: 0 0 0 4px #9b59b6;
+}
+
+.timeline-item.haart::before {
+    box-shadow: 0 0 0 4px #f39c12;
+}
+
+.timeline-item.neuraminidase::before {
+    box-shadow: 0 0 0 4px #95a5a6;
+}
+
+.timeline-item.truvada::before {
+    box-shadow: 0 0 0 4px #1abc9c;
+}
+
+.timeline-item.sofosbuvir::before {
+    box-shadow: 0 0 0 4px #e67e22;
+}
+
+.timeline-item.biktarvy::before {
+    box-shadow: 0 0 0 4px #16a085;
+}
+
+.timeline-item.mrna-vaccine::before {
+    box-shadow: 0 0 0 4px #27ae60;
+}
+
+.timeline-item.paxlovid::before {
+    box-shadow: 0 0 0 4px #2980b9;
+}
+
+/* Hover border colors */
+.timeline-item.acyclovir:hover {
+    border-color: #3498db;
+}
+
+.timeline-item.azt:hover {
+    border-color: #e74c3c;
+}
+
+.timeline-item.protease-inhibitor:hover {
+    border-color: #9b59b6;
+}
+
+.timeline-item.haart:hover {
+    border-color: #f39c12;
+}
+
+.timeline-item.neuraminidase:hover {
+    border-color: #95a5a6;
+}
+
+.timeline-item.truvada:hover {
+    border-color: #1abc9c;
+}
+
+.timeline-item.sofosbuvir:hover {
+    border-color: #e67e22;
+}
+
+.timeline-item.biktarvy:hover {
+    border-color: #16a085;
+}
+
+.timeline-item.mrna-vaccine:hover {
+    border-color: #27ae60;
+}
+
+.timeline-item.paxlovid:hover {
+    border-color: #2980b9;
+}
+
+/* Icon wrapper gradients */
+.timeline-item.acyclovir .icon-wrapper {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.timeline-item.azt .icon-wrapper {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timeline-item.protease-inhibitor .icon-wrapper {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.timeline-item.haart .icon-wrapper {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.timeline-item.neuraminidase .icon-wrapper {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.timeline-item.truvada .icon-wrapper {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.timeline-item.sofosbuvir .icon-wrapper {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.timeline-item.biktarvy .icon-wrapper {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.timeline-item.mrna-vaccine .icon-wrapper {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.timeline-item.paxlovid .icon-wrapper {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+/* Drug type badges */
+.timeline-item.acyclovir .drug-type {
+    background: #e3f2fd;
+    color: #01579b;
+}
+
+.timeline-item.azt .drug-type {
+    background: #ffebee;
+    color: #b71c1c;
+}
+
+.timeline-item.protease-inhibitor .drug-type {
+    background: #f3e5f5;
+    color: #4a148c;
+}
+
+.timeline-item.haart .drug-type {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.timeline-item.neuraminidase .drug-type {
+    background: #eceff1;
+    color: #37474f;
+}
+
+.timeline-item.truvada .drug-type {
+    background: #e0f2f1;
+    color: #004d40;
+}
+
+.timeline-item.sofosbuvir .drug-type {
+    background: #fbe9e7;
+    color: #bf360c;
+}
+
+.timeline-item.biktarvy .drug-type {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.timeline-item.mrna-vaccine .drug-type {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.timeline-item.paxlovid .drug-type {
+    background: #e1f5fe;
+    color: #0277bd;
+}
+
+/* Year badges */
+.timeline-item.acyclovir .year {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.timeline-item.azt .year {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timeline-item.protease-inhibitor .year {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.timeline-item.haart .year {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.timeline-item.neuraminidase .year {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.timeline-item.truvada .year {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.timeline-item.sofosbuvir .year {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.timeline-item.biktarvy .year {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.timeline-item.mrna-vaccine .year {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.timeline-item.paxlovid .year {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+/* Detail labels */
+.timeline-item.acyclovir .detail-label {
+    color: #01579b;
+}
+
+.timeline-item.azt .detail-label {
+    color: #b71c1c;
+}
+
+.timeline-item.protease-inhibitor .detail-label {
+    color: #4a148c;
+}
+
+.timeline-item.haart .detail-label {
+    color: #e65100;
+}
+
+.timeline-item.neuraminidase .detail-label {
+    color: #37474f;
+}
+
+.timeline-item.truvada .detail-label {
+    color: #004d40;
+}
+
+.timeline-item.sofosbuvir .detail-label {
+    color: #bf360c;
+}
+
+.timeline-item.biktarvy .detail-label {
+    color: #00695c;
+}
+
+.timeline-item.mrna-vaccine .detail-label {
+    color: #1b5e20;
+}
+
+.timeline-item.paxlovid .detail-label {
+    color: #0277bd;
+}
+
+/* Legend item border colors */
+.legend-item.nucleoside-analog {
+    border-color: #3498db;
+}
+
+.legend-item.protease-mechanism {
+    border-color: #9b59b6;
+}
+
+.legend-item.neuraminidase-mechanism {
+    border-color: #e74c3c;
+}
+
+.legend-item.polymerase-mechanism {
+    border-color: #1abc9c;
+}
+
+.legend-item.combination-mechanism {
+    border-color: #f39c12;
+}
+
+.legend-item.mrna-mechanism {
+    border-color: #e67e22;
+}
+
+.legend-item.viral-challenge {
+    border-color: #95a5a6;
+}
