@@ -2913,3 +2913,297 @@ h1 {
 .legend-item.viral-challenge {
     border-color: #95a5a6;
 }
+
+
+/* ============================================
+   CHEMOTHERAPY COLORS
+   ============================================ */
+
+/* Timeline dots */
+.timeline-item.nitrogen-mustard::before {
+    box-shadow: 0 0 0 4px #8e44ad;
+}
+
+.timeline-item.methotrexate::before {
+    box-shadow: 0 0 0 4px #3498db;
+}
+
+.timeline-item.mercaptopurine::before {
+    box-shadow: 0 0 0 4px #2980b9;
+}
+
+.timeline-item.mopp::before {
+    box-shadow: 0 0 0 4px #f39c12;
+}
+
+.timeline-item.vincristine::before {
+    box-shadow: 0 0 0 4px #27ae60;
+}
+
+.timeline-item.cisplatin::before {
+    box-shadow: 0 0 0 4px #95a5a6;
+}
+
+.timeline-item.paclitaxel::before {
+    box-shadow: 0 0 0 4px #16a085;
+}
+
+.timeline-item.imatinib::before {
+    box-shadow: 0 0 0 4px #e74c3c;
+}
+
+.timeline-item.pembrolizumab::before {
+    box-shadow: 0 0 0 4px #1abc9c;
+}
+
+.timeline-item.car-t::before {
+    box-shadow: 0 0 0 4px #e67e22;
+}
+
+/* Hover border colors */
+.timeline-item.nitrogen-mustard:hover {
+    border-color: #8e44ad;
+}
+
+.timeline-item.methotrexate:hover {
+    border-color: #3498db;
+}
+
+.timeline-item.mercaptopurine:hover {
+    border-color: #2980b9;
+}
+
+.timeline-item.mopp:hover {
+    border-color: #f39c12;
+}
+
+.timeline-item.vincristine:hover {
+    border-color: #27ae60;
+}
+
+.timeline-item.cisplatin:hover {
+    border-color: #95a5a6;
+}
+
+.timeline-item.paclitaxel:hover {
+    border-color: #16a085;
+}
+
+.timeline-item.imatinib:hover {
+    border-color: #e74c3c;
+}
+
+.timeline-item.pembrolizumab:hover {
+    border-color: #1abc9c;
+}
+
+.timeline-item.car-t:hover {
+    border-color: #e67e22;
+}
+
+/* Icon wrapper gradients */
+.timeline-item.nitrogen-mustard .icon-wrapper {
+    background: linear-gradient(135deg, #8e44ad, #6c3483);
+}
+
+.timeline-item.methotrexate .icon-wrapper {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.timeline-item.mercaptopurine .icon-wrapper {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+.timeline-item.mopp .icon-wrapper {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.timeline-item.vincristine .icon-wrapper {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.timeline-item.cisplatin .icon-wrapper {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.timeline-item.paclitaxel .icon-wrapper {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.timeline-item.imatinib .icon-wrapper {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timeline-item.pembrolizumab .icon-wrapper {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.timeline-item.car-t .icon-wrapper {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+/* Drug type badges */
+.timeline-item.nitrogen-mustard .drug-type {
+    background: #f4ecf7;
+    color: #6c3483;
+}
+
+.timeline-item.methotrexate .drug-type {
+    background: #e3f2fd;
+    color: #01579b;
+}
+
+.timeline-item.mercaptopurine .drug-type {
+    background: #e1f5fe;
+    color: #0277bd;
+}
+
+.timeline-item.mopp .drug-type {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.timeline-item.vincristine .drug-type {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.timeline-item.cisplatin .drug-type {
+    background: #eceff1;
+    color: #37474f;
+}
+
+.timeline-item.paclitaxel .drug-type {
+    background: #e0f2f1;
+    color: #00695c;
+}
+
+.timeline-item.imatinib .drug-type {
+    background: #ffebee;
+    color: #b71c1c;
+}
+
+.timeline-item.pembrolizumab .drug-type {
+    background: #e0f2f1;
+    color: #004d40;
+}
+
+.timeline-item.car-t .drug-type {
+    background: #fbe9e7;
+    color: #bf360c;
+}
+
+/* Year badges */
+.timeline-item.nitrogen-mustard .year {
+    background: linear-gradient(135deg, #8e44ad, #6c3483);
+}
+
+.timeline-item.methotrexate .year {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.timeline-item.mercaptopurine .year {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+.timeline-item.mopp .year {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.timeline-item.vincristine .year {
+    background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.timeline-item.cisplatin .year {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.timeline-item.paclitaxel .year {
+    background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.timeline-item.imatinib .year {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.timeline-item.pembrolizumab .year {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.timeline-item.car-t .year {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+/* Detail labels */
+.timeline-item.nitrogen-mustard .detail-label {
+    color: #6c3483;
+}
+
+.timeline-item.methotrexate .detail-label {
+    color: #01579b;
+}
+
+.timeline-item.mercaptopurine .detail-label {
+    color: #0277bd;
+}
+
+.timeline-item.mopp .detail-label {
+    color: #e65100;
+}
+
+.timeline-item.vincristine .detail-label {
+    color: #1b5e20;
+}
+
+.timeline-item.cisplatin .detail-label {
+    color: #37474f;
+}
+
+.timeline-item.paclitaxel .detail-label {
+    color: #00695c;
+}
+
+.timeline-item.imatinib .detail-label {
+    color: #b71c1c;
+}
+
+.timeline-item.pembrolizumab .detail-label {
+    color: #004d40;
+}
+
+.timeline-item.car-t .detail-label {
+    color: #bf360c;
+}
+
+/* Legend item border colors */
+.legend-item.alkylating-mechanism {
+    border-color: #8e44ad;
+}
+
+.legend-item.antimetabolite-mechanism {
+    border-color: #3498db;
+}
+
+.legend-item.plant-alkaloid-mechanism {
+    border-color: #27ae60;
+}
+
+.legend-item.platinum-mechanism {
+    border-color: #95a5a6;
+}
+
+.legend-item.targeted-mechanism {
+    border-color: #e74c3c;
+}
+
+.legend-item.immunotherapy-mechanism {
+    border-color: #1abc9c;
+}
+
+.legend-item.car-t-mechanism {
+    border-color: #f39c12;
+}
+
+.legend-item.combination-principle {
+    border-color: #e67e22;
+}

@@ -1260,6 +1260,138 @@ antivirals: [
     impact: "Provided at-home COVID treatment option, reducing burden on hospitals. Especially important for high-risk patients. Represents rapid antiviral development leveraging existing protease inhibitor knowledge.",
     controversy: "'Paxlovid rebound'—symptoms return after treatment in some patients. Must start very early. Many drug interactions due to ritonavir booster. Horrible metallic taste. Underutilized despite availability."
   }
+],
+chemotherapy: [
+  {
+    id: 1,
+    name: "Nitrogen Mustard (Mechlorethamine)",
+    year: 1942,
+    type: "Alkylating Agent",
+    typeAbbreviation: "ALK",
+    classKey: "nitrogen-mustard",
+    icon: "☠️",
+    description: "First chemotherapy drug, derived from mustard gas chemical weapons; secret WWII research showed tumors could temporarily melt away",
+    discoveredBy: "Louis Goodman and Alfred Gilman at Yale (classified US chemical warfare research)",
+    impact: "Proved for the first time that chemicals could make cancer disappear. Born from one of humanity's most evil inventions—WWI mustard gas. Published 1946 after war ended, launching the chemotherapy era.",
+    controversy: "Literally derived from chemical weapons designed to kill soldiers. Caused severe side effects and cancers always returned, but proved the impossible was possible. Ethical questions about weapon-derived medicine."
+  },
+  {
+    id: 2,
+    name: "Methotrexate (Amethopterin)",
+    year: 1948,
+    type: "Antimetabolite",
+    typeAbbreviation: "ANTI",
+    classKey: "methotrexate",
+    icon: "👶",
+    description: "First drug to achieve remissions in childhood leukemia by blocking folic acid; children given months to live could play again temporarily",
+    discoveredBy: "Sidney Farber at Boston Children's Hospital",
+    impact: "Gave hope where there was none—childhood ALL went from 100% fatal to potentially treatable. First antimetabolite. Still used today in combination regimens. Launched pediatric oncology as a field.",
+    controversy: "Brutal side effects (vomiting, mouth sores, bone marrow suppression) in dying children. Early remissions temporary—cancer returned. Parents faced agonizing decision: let child die comfortably or suffer through experimental toxic treatment with slim hope."
+  },
+  {
+    id: 3,
+    name: "6-Mercaptopurine (Purinethol)",
+    year: 1953,
+    type: "Antimetabolite",
+    typeAbbreviation: "ANTI",
+    classKey: "mercaptopurine",
+    icon: "🔬",
+    description: "Purine analog that poisons DNA synthesis in cancer cells; developed by Gertrude Elion who would win Nobel Prize",
+    discoveredBy: "Gertrude Elion and George Hitchings at Burroughs Wellcome",
+    impact: "Another weapon against childhood leukemia; combined with methotrexate improved outcomes. Elion later developed acyclovir (antivirals), azathioprine (immunosuppressant). 6-MP still used in ALL protocols today.",
+    controversy: "Required prolonged treatment causing cumulative toxicity. Some children developed secondary cancers decades later from the treatment that saved them—tragic trade-off."
+  },
+  {
+    id: 4,
+    name: "MOPP Protocol",
+    year: 1964,
+    type: "Combination Chemotherapy",
+    typeAbbreviation: "COMBO",
+    classKey: "mopp",
+    icon: "🎯",
+    description: "First combination regimen (4 drugs) that CURED disseminated cancer; Hodgkin's lymphoma went from death sentence to 50-60% cure rate",
+    discoveredBy: "Vincent DeVita at National Cancer Institute",
+    impact: "Revolutionary proof that combination therapy could CURE (not just temporarily suppress) metastatic cancer. Established principle of multi-drug attacks. Hodgkin's survival is now 85%+. Paradigm shift in oncology.",
+    controversy: "Infertility, heart damage, secondary leukemias decades later—'cured' patients faced long-term consequences. Risk-benefit calculation: die in 1 year vs. live 50 years with potential late effects. Most chose life."
+  },
+  {
+    id: 5,
+    name: "Vincristine (Oncovin)",
+    year: 1965,
+    type: "Vinca Alkaloid",
+    typeAbbreviation: "VINCA",
+    classKey: "vincristine",
+    icon: "🌸",
+    description: "Derived from Madagascar periwinkle plant; disrupts microtubules preventing cell division; key component of childhood ALL cure",
+    discoveredBy: "Isolated at Eli Lilly from *Catharanthus roseus* plant",
+    impact: "Critical drug in VAMP protocol that transformed childhood ALL from 0% to 90%+ cure rate over decades. Natural product showing plants contain powerful anticancer compounds. Part of most pediatric cancer protocols.",
+    controversy: "Causes permanent nerve damage (neuropathy) in many survivors—numbness, pain, difficulty walking. Children cured of cancer face lifelong disability from the treatment. Hair loss particularly traumatic for children."
+  },
+  {
+    id: 6,
+    name: "Cisplatin (Platinol)",
+    year: 1978,
+    type: "Platinum Compound",
+    typeAbbreviation: "PLAT",
+    classKey: "cisplatin",
+    icon: "💎",
+    description: "Accidental discovery from platinum electrodes; revolutionized testicular cancer from 90% fatal to 90%+ curable with BEP protocol",
+    discoveredBy: "Barnett Rosenberg (discovered 1965), Lawrence Einhorn (developed BEP protocol)",
+    impact: "One of medicine's most dramatic reversals—young men dying from testicular cancer now cured at 95%+ rate. Lance Armstrong survived metastatic testicular cancer with cisplatin. Also effective for ovarian, lung, bladder cancers.",
+    controversy: "Caused THE worst nausea/vomiting in medicine (before modern anti-nausea drugs), kidney failure, permanent hearing loss, nerve damage. Many survivors deaf or with chronic neuropathy. But alive—worth it for curable cancer."
+  },
+  {
+    id: 7,
+    name: "Paclitaxel (Taxol)",
+    year: 1992,
+    type: "Taxane",
+    typeAbbreviation: "TAX",
+    classKey: "paclitaxel",
+    icon: "🌲",
+    description: "Extracted from Pacific yew tree bark; novel mechanism stabilizing microtubules; required stripping ancient trees until synthetic production developed",
+    discoveredBy: "Monroe Wall and Mansukh Wani at Research Triangle Institute (isolated 1971); developed by NCI",
+    impact: "Major advance for breast, ovarian, lung cancers. Completely new mechanism showed more ways to attack cancer existed. Environmental crisis (harvesting endangered slow-growing trees) forced synthetic chemistry innovation.",
+    controversy: "Environmental catastrophe—60-foot 200-year-old trees stripped for bark yielding enough drug for ONE patient. Sparked debate: save trees or save lives? Eventually solved by semi-synthesis and total synthesis but took decades."
+  },
+  {
+    id: 8,
+    name: "Imatinib (Gleevec)",
+    year: 2001,
+    type: "Tyrosine Kinase Inhibitor",
+    typeAbbreviation: "TKI",
+    classKey: "imatinib",
+    icon: "🎯",
+    description: "First targeted 'smart bomb' chemotherapy; oral pill specifically inhibiting BCR-ABL in chronic myeloid leukemia—98% remission rate",
+    discoveredBy: "Nicholas Lydon, Brian Druker, and team at Novartis",
+    impact: "**PARADIGM SHIFT:** CML transformed from fatal (3-5 years) to chronic manageable disease with normal lifespan. Proved targeted therapy works. Time Magazine: 'The Bullet.' Launched precision oncology era. Fastest oncology drug approval—2.5 months!",
+    controversy: "Novartis charged $30,000/year (now $120,000+); patients need lifelong treatment. Cannot stop drug or cancer returns. India allowed generic production (Novartis sued). Life-saving drug held hostage by patents and pricing."
+  },
+  {
+    id: 9,
+    name: "Pembrolizumab (Keytruda)",
+    year: 2014,
+    type: "PD-1 Checkpoint Inhibitor",
+    typeAbbreviation: "CPI",
+    classKey: "pembrolizumab",
+    icon: "🛡️",
+    description: "Immunotherapy releasing immune system brakes to attack cancer; works across many cancer types with durable responses lasting years",
+    discoveredBy: "Based on Tasuku Honjo's PD-1 research (Nobel 2018); developed by Merck",
+    impact: "Revolutionized melanoma, lung, kidney, bladder, many cancers. Jimmy Carter cured of metastatic melanoma at age 90! Some patients with stage 4 cancer living 5-10+ years. 'Living drug'—immune system does the killing. Checkpoint inhibitors are biggest oncology advance since targeted therapy.",
+    controversy: "Works in only 20-40% of patients; no good biomarkers predict response. Non-responders suffer side effects without benefit. Extreme cost ($150,000+/year). Autoimmune side effects can be fatal (colitis, pneumonitis, hepatitis). Trial-and-error approach frustrating."
+  },
+  {
+    id: 10,
+    name: "Tisagenlecleucel (Kymriah) CAR-T",
+    year: 2017,
+    type: "CAR-T Cell Therapy",
+    typeAbbreviation: "CAR-T",
+    classKey: "car-t",
+    icon: "🧬",
+    description: "Genetically engineered patient's own T cells to hunt cancer; 80-90% remission in previously incurable childhood leukemia",
+    discoveredBy: "Carl June at University of Pennsylvania; Novartis",
+    impact: "Most advanced immunotherapy—living drugs manufactured for each patient. Children dying from relapsed ALL cured after single treatment. Represents future: personalized genetic engineering therapy. Proof that incurable can become curable.",
+    controversy: "**$475,000 per treatment** (one-time)—most expensive drug ever. Life-threatening cytokine release syndrome possible. Manufacturing takes weeks—some patients die waiting. Only works for certain blood cancers so far. Equity nightmare—who gets access?"
+  }
 ]
 };
 
@@ -1307,6 +1439,10 @@ const journeyTexts = {
   antivirals: {
     title: "The Journey",
     text: "For most of history, viral infections were untreatable death sentences—viruses hijack our own cells, making them nearly impossible to fight without destroying the host. Acyclovir (1982) proved antivirals were possible. The AIDS crisis forced unprecedented urgency: AZT offered hope but couldn't stop HIV alone. Then in 1996, combination therapy created the 'Lazarus effect'—the dying rose from their beds as HIV became manageable. Direct-acting antivirals cured Hepatitis C (2013). COVID mRNA vaccines (2020) were designed in 48 hours and approved in 11 months, shattering all records. From impossible dream to miracle cures, antivirals represent medicine's triumph over its most elusive enemy."
+  },
+  chemotherapy: {
+    title: "The Journey",
+    text: "Chemotherapy was born from horror—mustard gas chemical weapons that killed WWI soldiers were secretly tested on cancer patients in 1942, causing tumors to temporarily vanish. From this dark beginning emerged hope: Sidney Farber's methotrexate gave dying leukemic children temporary remissions in 1948. Combination therapy in the 1960s achieved the impossible—CURING disseminated Hodgkin's lymphoma and childhood leukemia. Cisplatin transformed testicular cancer from 90% fatal to 90%+ curable. Then came the revolution: Gleevec (2001) proved targeted 'smart bombs' work, and checkpoint inhibitors (2014) unleashed the immune system. CAR-T cells (2017)—genetically engineered living drugs—cure previously hopeless cases. From chemical weapons to precision genetic engineering: chemotherapy's 80-year journey from carpet-bombing to guided missiles."
   }
 };
 
@@ -1825,6 +1961,69 @@ antivirals: {
       mechanism: "Viruses use HOST cell machinery to replicate—they're not alive independently. Must target viral-specific enzymes without harming host. Viruses mutate rapidly (especially RNA viruses like HIV, HCV, influenza, COVID). Each virus family needs different drugs—herpes drugs don't work for HIV, flu drugs don't work for COVID. This is why antivirals took decades to develop and why we still don't have broad-spectrum antivirals."
     }
   ]
+},
+chemotherapy: {
+  title: "Mechanism Classes",
+  icon: "☠️",
+  description: "Chemotherapy exploits cancer's Achilles heel: uncontrolled rapid cell division. Different drug classes attack this through diverse mechanisms—damaging DNA, poisoning metabolism, disrupting cell division machinery, or unleashing the immune system. Modern therapy often combines multiple mechanisms.",
+  items: [
+    {
+      name: "Alkylating Agents",
+      fullName: "DNA Cross-linking Agents",
+      color: "linear-gradient(135deg, #8e44ad, #6c3483)",
+      classKey: "alkylating-mechanism",
+      mechanism: "Directly damage DNA by adding alkyl groups that cross-link DNA strands, preventing replication and transcription. Nitrogen mustard (derived from mustard gas) and cisplatin (platinum compound) work this way. Non-specific—hit all dividing cells including cancer, bone marrow, GI tract, hair follicles. First chemotherapy class discovered (1942)."
+    },
+    {
+      name: "Antimetabolites",
+      fullName: "DNA Synthesis Inhibitors",
+      color: "linear-gradient(135deg, #3498db, #2980b9)",
+      classKey: "antimetabolite-mechanism",
+      mechanism: "Mimic natural metabolites (building blocks) needed for DNA synthesis but are defective. Methotrexate blocks folate (needed for nucleotide synthesis). 6-Mercaptopurine mimics purines. Cancer cells trying to divide incorporate these 'fake' building blocks and die. Relatively selective for rapidly dividing cells."
+    },
+    {
+      name: "Plant-Derived Alkaloids",
+      fullName: "Microtubule Disruptors",
+      color: "linear-gradient(135deg, #27ae60, #229954)",
+      classKey: "plant-alkaloid-mechanism",
+      mechanism: "Derived from plants—vincristine from Madagascar periwinkle, paclitaxel from Pacific yew. Disrupt microtubules (cellular scaffolding needed for cell division). Vincristine prevents microtubule formation; paclitaxel stabilizes them so tightly cells can't divide. Both block mitosis. Prove nature contains powerful anticancer compounds."
+    },
+    {
+      name: "Platinum Compounds",
+      fullName: "DNA Damage via Platinum Coordination",
+      color: "linear-gradient(135deg, #95a5a6, #7f8c8d)",
+      classKey: "platinum-mechanism",
+      mechanism: "Platinum forms coordination complexes with DNA bases, creating DNA cross-links and distortions. Cisplatin, carboplatin, oxaliplatin bind to guanine bases. Triggers apoptosis (cell death). Particularly effective for testicular, ovarian, lung cancers. Accidental discovery from platinum electrode experiments."
+    },
+    {
+      name: "Targeted Therapy",
+      fullName: "Specific Molecular Target Inhibitors",
+      color: "linear-gradient(135deg, #e74c3c, #c0392b)",
+      classKey: "targeted-mechanism",
+      mechanism: "Designed to inhibit SPECIFIC cancer-driving proteins. Imatinib blocks BCR-ABL kinase in CML. Trastuzumab (Herceptin) blocks HER2 in breast cancer. EGFR inhibitors for lung cancer. BRAF inhibitors for melanoma. Paradigm shift from 'kill all dividing cells' to 'disable specific cancer mutation.' More selective = fewer side effects. Requires identifying actionable mutation first."
+    },
+    {
+      name: "Immunotherapy",
+      fullName: "Immune Checkpoint Inhibitors",
+      color: "linear-gradient(135deg, #1abc9c, #16a085)",
+      classKey: "immunotherapy-mechanism",
+      mechanism: "Unleash immune system to attack cancer. PD-1/PD-L1 inhibitors (pembrolizumab, nivolumab) block 'don't eat me' signals cancer uses to hide from T cells. CTLA-4 inhibitors (ipilimumab) enhance T cell activation. Not traditional chemo—empowers patient's own immune system. Can produce durable responses lasting years. Some patients functionally cured of metastatic disease."
+    },
+    {
+      name: "CAR-T Cell Therapy",
+      fullName: "Genetically Engineered Living Drugs",
+      color: "linear-gradient(135deg, #f39c12, #e67e22)",
+      classKey: "car-t-mechanism",
+      mechanism: "Extract patient's T cells, genetically engineer them to express chimeric antigen receptor (CAR) targeting cancer surface protein (often CD19 for leukemia/lymphoma), expand to millions, infuse back. Engineered T cells hunt and kill cancer cells throughout body. Living, self-replicating drug. Most advanced therapy—personalized genetic engineering medicine. 80-90% remission in some previously incurable cancers."
+    },
+    {
+      name: "Combination Therapy Principle",
+      fullName: "Why We Use Multiple Drugs",
+      color: "linear-gradient(135deg, #e67e22, #d35400)",
+      classKey: "combination-principle",
+      mechanism: "Cancer mutates to escape single drugs (just like HIV, bacteria). Combination therapy attacks through multiple mechanisms simultaneously—cancer must develop resistance to ALL drugs at once (nearly impossible). MOPP (1964) first proved this, curing Hodgkin's. Modern protocols use 3-6 drugs. Also allows lower doses of each drug, reducing toxicity. Foundation of curative chemotherapy regimens."
+    }
+  ]
 }
 };
 
@@ -1906,12 +2105,20 @@ const conditionInfo = {
   },
 
   antivirals: {
-  name: "Viral Infections",
-  icon: "🦠",
-  description: "Viruses are not technically alive—they're genetic material (DNA or RNA) wrapped in protein that hijacks living cells to reproduce. Unlike bacteria, viruses use the host cell's own machinery, making them extraordinarily difficult to target without harming the host. Viral infections range from nuisance (common cold) to acute deadly (Ebola) to chronic destructive (HIV, Hepatitis C).",
-  pathophysiology: "Viral replication cycle: (1) Attachment—virus binds to specific cell surface receptors, (2) Entry—viral genetic material enters cell, (3) Uncoating—viral genome released, (4) Replication—viral polymerases copy genetic material using host cell's resources, (5) Assembly—new viral proteins and genomes combine, (6) Release—new viruses exit to infect more cells. Different antivirals target different steps. RNA viruses (HIV, HCV, influenza, COVID) mutate rapidly due to error-prone polymerases, enabling drug resistance and immune escape. DNA viruses (herpes, smallpox) are more stable. Retroviruses (HIV) reverse-transcribe RNA into DNA that integrates into host genome—nearly impossible to eliminate. Chronic viral infections (HIV, HCV, herpes) establish persistent or latent infections, requiring long-term or lifelong treatment.",
-  prevalence: "HIV: 39 million people living with HIV globally; 630,000 AIDS deaths annually (down from 2+ million at peak). Hepatitis C: 58 million chronic infections worldwide; leading cause of liver transplants before DAAs. Influenza: 3-5 million severe cases annually, 290,000-650,000 deaths. COVID-19: 775+ million confirmed cases, 7+ million deaths (2020-2024); actual numbers likely much higher. Herpes simplex: 67% of global population under 50 has HSV-1 (oral herpes); 13% have HSV-2 (genital herpes). Despite antiviral advances, viral infections remain leading causes of death worldwide, especially in resource-limited settings."
-}
+    name: "Viral Infections",
+    icon: "🦠",
+    description: "Viruses are not technically alive—they're genetic material (DNA or RNA) wrapped in protein that hijacks living cells to reproduce. Unlike bacteria, viruses use the host cell's own machinery, making them extraordinarily difficult to target without harming the host. Viral infections range from nuisance (common cold) to acute deadly (Ebola) to chronic destructive (HIV, Hepatitis C).",
+    pathophysiology: "Viral replication cycle: (1) Attachment—virus binds to specific cell surface receptors, (2) Entry—viral genetic material enters cell, (3) Uncoating—viral genome released, (4) Replication—viral polymerases copy genetic material using host cell's resources, (5) Assembly—new viral proteins and genomes combine, (6) Release—new viruses exit to infect more cells. Different antivirals target different steps. RNA viruses (HIV, HCV, influenza, COVID) mutate rapidly due to error-prone polymerases, enabling drug resistance and immune escape. DNA viruses (herpes, smallpox) are more stable. Retroviruses (HIV) reverse-transcribe RNA into DNA that integrates into host genome—nearly impossible to eliminate. Chronic viral infections (HIV, HCV, herpes) establish persistent or latent infections, requiring long-term or lifelong treatment.",
+    prevalence: "HIV: 39 million people living with HIV globally; 630,000 AIDS deaths annually (down from 2+ million at peak). Hepatitis C: 58 million chronic infections worldwide; leading cause of liver transplants before DAAs. Influenza: 3-5 million severe cases annually, 290,000-650,000 deaths. COVID-19: 775+ million confirmed cases, 7+ million deaths (2020-2024); actual numbers likely much higher. Herpes simplex: 67% of global population under 50 has HSV-1 (oral herpes); 13% have HSV-2 (genital herpes). Despite antiviral advances, viral infections remain leading causes of death worldwide, especially in resource-limited settings."
+  },
+
+  chemotherapy: {
+    name: "Cancer (Malignant Neoplasms)",
+    icon: "🎗️",
+    description: "Cancer is uncontrolled cell growth resulting from accumulated genetic mutations that disable normal growth regulation, cell death programs, and immune surveillance. Unlike normal cells that divide in controlled fashion and die when damaged, cancer cells divide indefinitely, evade death signals, invade surrounding tissues, and metastasize (spread) to distant organs. There are 200+ types of cancer affecting virtually every tissue.",
+    pathophysiology: "Cancer develops through multi-step process of mutation accumulation (oncogenes activated, tumor suppressors inactivated). Hallmarks of cancer: (1) self-sufficiency in growth signals, (2) insensitivity to anti-growth signals, (3) evading apoptosis (programmed cell death), (4) limitless replicative potential, (5) sustained angiogenesis (blood vessel formation), (6) tissue invasion and metastasis, (7) reprogrammed metabolism, (8) evading immune destruction. Genetic instability drives tumor evolution—cancer cells mutate rapidly, creating heterogeneous populations. This enables drug resistance: rare resistant clones survive treatment and repopulate tumor. Metastasis (spread to distant organs) is responsible for 90% of cancer deaths. Chemotherapy targets rapidly dividing cells but cannot distinguish cancer from normal rapidly dividing tissues (bone marrow, GI tract, hair follicles)—causing severe side effects. Cancer stem cells may survive treatment and cause relapse. Tumor microenvironment (supporting cells, blood vessels, immune cells) aids cancer survival.",
+    prevalence: "Cancer is second leading cause of death globally: 10 million deaths annually, 19.3 million new cases (2020). In US: 2 million new cases, 600,000+ deaths annually. Lifetime risk: 1 in 2 men, 1 in 3 women will develop cancer. Most common: lung, breast, colorectal, prostate. Progress: overall cancer death rate declined 33% from 1991-2020 (avoiding 3.8 million deaths) due to smoking reduction, screening, and improved treatments. Survival varies dramatically: testicular cancer 95%+ cure, pancreatic cancer 11% 5-year survival. Childhood cancer survival increased from <30% (1970s) to 85% (today)—one of medicine's greatest triumphs. Yet cancer still kills more people than HIV, TB, and malaria combined. The 'war on cancer' (declared 1971) has achieved major victories in some cancers while others remain largely intractable."
+  }
 };
 
 // Optional: Helper function to get all drug classes
